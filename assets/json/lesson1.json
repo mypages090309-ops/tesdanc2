@@ -26,17 +26,17 @@
       {
         "name": "Power Supply Unit (PSU)",
         "definition": "Ang PSU ay nagko-convert ng electrical power mula sa wall outlet papunta sa power requirements ng mga internal components ng computer.",
-        "image": "assets/image/power_supply.jpeg"
+        "image": "assets/image/powersupply.jpeg"
       },
       {
         "name": "Cooling Fans",
         "definition": "Ang cooling fans ay ginagamit upang mapanatiling malamig ang mga internal components ng computer, lalo na ang CPU, para maiwasan ang overheating.",
-        "image": "assets/image/cooling fan.jpeg"
+        "image": "assets/image/coolingfan.jpeg"
       },
       {
         "name": "Optical Drive",
         "definition": "Ang optical drive ay ginagamit upang magbasa at magsulat ng data sa optical discs tulad ng CDs o DVDs, bagaman hindi na ito kadalasang ginagamit sa mga modernong computers.",
-        "image": "assets/image/optical drive.jpeg"
+        "image": "assets/image/opticaldrive.jpeg"
       }
     ],
     "step_by_step_procedure": [
@@ -68,3 +68,4 @@
     ]
   }
 }
+
