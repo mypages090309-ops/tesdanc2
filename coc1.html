@@ -1,51 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>COC 1 - Course Overview</title>
-  <link rel="stylesheet" href="coc1.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COC 1 - Install and Configure Computer Systems</title>
+    <link rel="stylesheet" href="coc1.css">
 </head>
 <body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2>Lessons</h2>
+            <ul id="lesson-list">
+                <li onclick="loadLesson('lesson1')">Assembly and Disassembly of Computer Unit</li>
+                <li onclick="loadLesson('lesson2')">Test the Computer Unit and Configure BIOS</li>
+                <li onclick="loadLesson('lesson3')">Prepare the Bootable USB Installers</li>
+                <li onclick="loadLesson('lesson4')">Install Drivers & Share Printer</li>
+                <li onclick="loadLesson('lesson5')">Configure Computer Systems</li>
+                <li onclick="loadLesson('lesson6')">Turn off Firewalls (All Computers)</li>
+                <li onclick="loadLesson('lesson7')">Configure Advanced Sharing (All Computers)</li>
+                <li onclick="loadLesson('lesson8')">Rename Computers (SERVER: last name, CLIENT: first name)</li>
+            </ul>
+        </div>
 
-  <div class="dashboard">
-    <!-- Left Sidebar with Lessons -->
-    <aside class="sidebar">
-      <h2>COC 1 Lessons</h2>
-      <ul id="lesson-list">
-        <li id="lesson1" class="active">Lesson 1: Assembly and Disassembly</li>
-        <li id="lesson2">Lesson 2: Create Bootable USB using Rufus</li>
-        <li id="lesson3">Lesson 3: Configuring Computer Systems</li>
-        <li id="lesson4">Lesson 4: Troubleshooting and Diagnostics</li>
-        <li id="lesson5">Lesson 5: Install and Configure OS</li>
-        <li id="lesson6">Lesson 6: Setting Up Computer Networks</li>
-        <li id="lesson7">Lesson 7: Computer Maintenance</li>
-        <li id="lesson8">Lesson 8: Installing Peripheral Devices</li>
-        <li id="lesson9">Lesson 9: System Recovery and Backup</li>
-        <li id="lesson10">Lesson 10: Understanding BIOS and CMOS Settings</li>
-        <li id="lesson11">Lesson 11: Final Project and Certification</li>
-      </ul>
-    </aside>
+        <!-- Content Section -->
+        <div class="content">
+            <button class="close-btn" onclick="closeWindow()">X</button>
+            <h2 id="lesson-title">Welcome to your lessons</h2>
+            <div id="lesson-details">
+                <p>Select a lesson from the sidebar to view details.</p>
+            </div>
+        </div>
+    </div>
 
-    <!-- Main Content Area -->
-    <main class="main-content">
-      <h1>COC 1 - Course Overview</h1>
-      <p>This section focuses on the basics of computer system assembly and installation.</p>
-
-      <!-- Lesson Content Display -->
-      <div class="lesson-container">
-        <h2 id="lesson-title">Lesson 1: Assembly and Disassembly of Computer Unit</h2>
-        <p id="lesson-content">
-          In this lesson, we will go over the basic steps to disassemble and reassemble a computer unit.
-        </p>
-
-        <!-- Buttons to navigate lessons -->
-        <button id="nextLesson" onclick="nextLesson()">Next Lesson</button>
-        <button id="previousLesson" onclick="previousLesson()">Previous Lesson</button>
-      </div>
-    </main>
-  </div>
-
-  <script src="coc1.js"></script>
+    <script src="coc1.js"></script>
 </body>
 </html>
