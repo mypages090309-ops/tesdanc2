@@ -1,64 +1,71 @@
+/* student_dashboard.html */
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Student Dashboard | CSS NC II</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard | CSS NC II</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/student-dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/student-dashboard.css">
 </head>
 <body>
 
 <div class="dashboard">
 
-  <aside class="sidebar">
-    <h2>Student Panel</h2>
-    <ul>
-      <li class="active">Dashboard</li>
-      <li>My Enrollment</li>
-      <li>Requirements</li>
-      <li>Profile</li>
-      <li id="logoutBtn">Logout</li>
-    </ul>
-  </aside>
+    <aside class="sidebar">
+        <h2>Student Panel</h2>
+        <ul>
+            <li class="active">Dashboard</li>
+            <li id="enrollmentBtn"><a href="#">My Enrollment</a></li> <!-- My Enrollment Link -->
+            <div id="enrollmentContent" class="sidebar-content">
+                <!-- COCs will appear here when My Enrollment is clicked -->
+                <li><a href="coc1.html">COC 1: Install and Configure Computer Systems</a></li>
+                <li><a href="coc2.html">COC 2: Set Up Computer Networks</a></li>
+                <li><a href="coc3.html">COC 3: Set Up Computer Servers</a></li>
+                <li><a href="coc4.html">COC 4: Maintain and Repair Computer Systems</a></li>
+            </div>
+            <li><a href="#requirementsSection">Requirements</a></li>
+            <li><a href="#profileSection">Profile</a></li>
+            <li id="logoutBtn">Logout</li>
+        </ul>
+    </aside>
 
-  <main class="main-content">
-    <header>
-      <h1>Welcome, Student 👋</h1>
-      <p>Your training progress overview</p>
-    </header>
+    <main class="main-content">
+        <header>
+            <h1>Welcome, Student 👋</h1>
+            <p>Your training progress overview</p>
+        </header>
 
-    <!-- Enrollment Status + Dynamic Sections -->
-    <div class="cards">
-
-      <div class="card">
-        <h3>Enrollment Status</h3>
-        <p id="enrollmentStatus">Loading...</p>
-      </div>
-
-    </div>
-
-    <!-- LOCKED CONTENT (Hidden until approved) -->
-    <div id="lockedContent" style="display:none;">
-
-      <div class="cards" style="margin-top:20px;">
-
-        <div class="card">
-          <h3>Submitted Requirements</h3>
-          <p>3 / 5 Completed</p>
+        <!-- Enrollment Status + Dynamic Sections -->
+        <div class="cards" id="enrollmentStatusSection">
+            <div class="card">
+                <h3>Enrollment Status</h3>
+                <p id="enrollmentStatus">Completed</p>
+            </div>
         </div>
 
-        <div class="card">
-          <h3>Training Schedule</h3>
-          <p>Not Yet Assigned</p>
+        <!-- My Enrollment Section (Expanded in Sidebar) -->
+        <div class="cards" style="margin-top:20px;">
+            <div class="card">
+                <h3>My Enrollment</h3>
+                <p>Details about enrollment status, program, etc.</p>
+            </div>
         </div>
 
-      </div>
+        <!-- Requirements and Schedule -->
+        <div class="cards" style="margin-top:20px;">
+            <div class="card">
+                <h3>Submitted Requirements</h3>
+                <p>3 / 5 Completed</p>
+            </div>
+            <div class="card">
+                <h3>Training Schedule</h3>
+                <p>Not Yet Assigned</p>
+            </div>
+        </div>
 
-    </div>
-
-  </main>
+    </main>
 
 </div>
 
