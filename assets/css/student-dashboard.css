@@ -65,7 +65,7 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, .05);
 }
 
-/* Remove underline from sidebar links */
+/* No underline and color white for sidebar links */
 .sidebar-content {
   display: none; /* Initially hidden */
   padding-left: 20px;
@@ -85,6 +85,11 @@ body {
 .sidebar-content a:hover {
   color: #2563eb; /* Change color to blue on hover */
   text-decoration: none; /* Ensure no underline on hover */
+}
+
+/* Active link styles */
+.sidebar-content a.active {
+  color: #2563eb;
 }
 
 .accordion-button {
