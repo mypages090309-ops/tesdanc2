@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COC 1 - Install and Configure Computer Systems</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/coc1.css"> <!-- Link to your CSS -->
+    <link rel="stylesheet" href="assets/css/coc1.css">
 </head>
 <body>
 
@@ -20,7 +20,7 @@
     <h2>COC 1 Lessons</h2>
     <ul>
       <li onclick="loadLesson('lesson1')">Assembly and Disassembly of Computer Unit</li>
-      <li onclick="loadLesson('lesson2')">Test the Computer Unit and Configure BIOS</li>
+      <li onclick="loadLesson('lesson2')">Test the Computer Unit and Configure BIOS</li> <!-- This is where the lesson2.json should show -->
       <li onclick="loadLesson('lesson3')">Prepare the Bootable USB Installers</li>
       <li onclick="loadLesson('lesson4')">Install Drivers & Share Printer</li>
       <li onclick="loadLesson('lesson5')">Configure Computer Systems</li>
@@ -44,8 +44,8 @@
     // Function to load lesson details dynamically into the content area
     function loadLesson(lessonId) {
         const lessonUrl = lessonId === 'lesson1'
-            ? 'https://tesda-auth-api.nextwavehub01.workers.dev/lesson1.json'  // Existing lesson1 worker URL
-            : 'https://coc1lessonworker.nextwavehub01.workers.dev/lesson2.json';  // New worker URL for lesson2
+            ? 'https://tesda-auth-api.nextwavehub01.workers.dev/lesson1.json'  // Existing worker for lesson1
+            : 'https://coc1lessonworker.nextwavehub01.workers.dev/lesson2.json';  // Worker URL for lesson2 (coc1lessonworker)
 
         fetch(lessonUrl)
             .then(response => response.json())
@@ -78,4 +78,3 @@
 <script src="assets/js/coc1.js"></script> <!-- Correct JS path -->
 </body>
 </html>
-
