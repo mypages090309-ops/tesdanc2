@@ -1,4 +1,3 @@
-/* student-dashboard.js */
 const API_URL = "https://tesda-auth-api.nextwavehub01.workers.dev";
 
 const isLoggedIn = localStorage.getItem("loggedIn");
@@ -61,3 +60,4 @@ document.getElementById("enrollmentBtn").addEventListener("click", function () {
     enrollmentContent.style.display = "block";
   }
 });
+
