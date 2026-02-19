@@ -1,3 +1,4 @@
+/* student_dashboard.html */
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,13 +18,15 @@
         <ul>
             <li class="active">Dashboard</li>
             <li id="enrollmentBtn"><a href="#">My Enrollment</a></li> <!-- My Enrollment Link -->
-            <div id="enrollmentContent" class="sidebar-content">
-                <!-- COCs will appear here when My Enrollment is clicked -->
+            
+            <!-- COCs appear when My Enrollment is clicked -->
+            <div id="enrollmentContent" class="sidebar-content" style="display:none;">
                 <li><a href="coc1.html">COC 1: Install and Configure Computer Systems</a></li>
                 <li><a href="coc2.html">COC 2: Set Up Computer Networks</a></li>
                 <li><a href="coc3.html">COC 3: Set Up Computer Servers</a></li>
                 <li><a href="coc4.html">COC 4: Maintain and Repair Computer Systems</a></li>
             </div>
+
             <li><a href="#requirementsSection">Requirements</a></li>
             <li><a href="#profileSection">Profile</a></li>
             <li id="logoutBtn">Logout</li>
@@ -71,4 +74,3 @@
 <script src="assets/js/student-dashboard.js"></script>
 </body>
 </html>
-
