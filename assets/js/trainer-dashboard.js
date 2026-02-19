@@ -44,7 +44,7 @@ async function loadStudents() {
     if (!response.ok || !data.students || data.students.length === 0) {
       tbody.innerHTML = `
         <tr>
-          <td colspan="3" style="padding:12px;">No students enrolled yet.</td>
+          <td colspan="4" style="padding:12px;">No students enrolled yet.</td>
         </tr>
       `;
       return;
@@ -58,6 +58,14 @@ async function loadStudents() {
           <td style="padding:12px;">
             ${new Date(student.created_at).toLocaleDateString()}
           </td>
+          <td style="padding:12px;">
+            <button onclick="updateStatus('${student.email}','Approved')" style="margin-right:6px; padding:6px 10px; cursor:pointer;">
+              Approve
+            </button>
+            <button onclick="updateStatus('${student.email}','Rejected')" style="padding:6px 10px; cursor:pointer;">
+              Reject
+            </button>
+          </td>
         </tr>
       `;
       tbody.innerHTML += row;
@@ -65,6 +73,38 @@ async function loadStudents() {
 
   } catch (err) {
     console.error("Failed to load student list");
+  }
+}
+
+// =============================
+// UPDATE STUDENT STATUS
+// =============================
+async function updateStatus(studentEmail, status) {
+  try {
+    const response = await fetch(`${API_URL}/update-student-status`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        email: email,
+        student_email: studentEmail,
+        status: status
+      })
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      alert(data.error);
+      return;
+    }
+
+    // reload list after update
+    loadStudents();
+
+  } catch (err) {
+    console.error("Failed to update status");
   }
 }
 
@@ -77,5 +117,5 @@ loadStudents();
 // =============================
 document.getElementById("logoutBtn").addEventListener("click", function(){
   localStorage.clear();
-  window.location.href = "login.html";
+  window.location.href = "index.html";
 });
