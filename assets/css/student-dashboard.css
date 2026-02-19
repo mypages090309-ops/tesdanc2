@@ -65,7 +65,7 @@ body{
   box-shadow:0 10px 30px rgba(0,0,0,.05);
 }
 
-/* Remove underline and customize link styles */
+/* Remove underline and make sure the links are clean */
 .sidebar-content {
     display: none; /* Initially hidden */
     padding-left: 20px;
