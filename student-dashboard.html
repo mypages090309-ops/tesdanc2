@@ -17,23 +17,17 @@
         <h2>Student Panel</h2>
         <ul>
             <li class="active">Dashboard</li>
-            <li><a href="#enrollmentStatusSection">My Enrollment</a></li>
+            <li id="enrollmentBtn"><a href="#">My Enrollment</a></li> <!-- My Enrollment Link -->
+            <div id="enrollmentContent" class="sidebar-content">
+                <!-- COCs will appear here when My Enrollment is clicked -->
+                <li><a href="coc1.html">COC 1: Install and Configure Computer Systems</a></li>
+                <li><a href="coc2.html">COC 2: Set Up Computer Networks</a></li>
+                <li><a href="coc3.html">COC 3: Set Up Computer Servers</a></li>
+                <li><a href="coc4.html">COC 4: Maintain and Repair Computer Systems</a></li>
+            </div>
             <li><a href="#requirementsSection">Requirements</a></li>
             <li><a href="#profileSection">Profile</a></li>
             <li id="logoutBtn">Logout</li>
-
-            <!-- Accordion-style COC Links -->
-            <li>
-                <button class="accordion-button" onclick="toggleAccordion('cocAccordion')">COC Sections</button>
-                <div id="cocAccordion" class="accordion-content">
-                    <ul>
-                        <li><a href="coc1.html">COC 1: Install and Configure Computer Systems</a></li>
-                        <li><a href="coc2.html">COC 2: Set Up Computer Networks</a></li>
-                        <li><a href="coc3.html">COC 3: Set Up Computer Servers</a></li>
-                        <li><a href="coc4.html">COC 4: Maintain and Repair Computer Systems</a></li>
-                    </ul>
-                </div>
-            </li>
         </ul>
     </aside>
 
@@ -51,7 +45,7 @@
             </div>
         </div>
 
-        <!-- My Enrollment Section -->
+        <!-- My Enrollment Section (Expanded in Sidebar) -->
         <div class="cards" style="margin-top:20px;">
             <div class="card">
                 <h3>My Enrollment</h3>
