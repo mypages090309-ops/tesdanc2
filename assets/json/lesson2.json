@@ -1,51 +1,53 @@
 {
-  "lesson_title": "Pagsubok ng Computer Unit at Pag-configure ng BIOS",
-  "lesson_description": "Sa araling ito, matututuhan mo kung paano mag-test ng computer unit at kung paano mag-configure ng BIOS upang matiyak ang tamang setup ng hardware at mai-optimize ang performance ng system. Tatalakayin ang mga hakbang mula sa pag-setup ng hardware, pagsusuri ng POST, hanggang sa BIOS configuration at pag-test ng unit.",
-  "objectives": [
-    "Matutunan ang mga hakbang sa pagsubok ng computer unit at BIOS.",
-    "Matutunang mag-configure ng BIOS para sa optimal na performance ng system.",
-    "Maging pamilyar sa mga BIOS settings na pwedeng baguhin para sa system optimization.",
-    "Tiyakin na gumagana ng maayos ang lahat ng hardware components sa computer unit."
-  ],
-  "materials_needed": [
-    "Computer unit",
-    "Keyboard at mouse",
-    "Monitor",
-    "Power cable",
-    "USB flash drive (para sa BIOS update kung kinakailangan)",
-    "Screwdriver (kung kinakailangan upang buksan ang case ng computer)"
-  ],
-  "step_by_step_procedure": [
-    {
-      "step_number": 1,
-      "step_title": "I-set up ang Hardware",
-      "step_description": "Ang unang hakbang ay tiyakin na ang lahat ng peripherals (keyboard, mouse, monitor, power cable) ay nakakabit nang maayos sa computer. Pagkatapos, i-on ang computer at tiyakin na walang mga loose connections na maaaring magdulot ng problema. Siguraduhing nakapasok nang maayos ang mga cables sa mga ports at walang maluwag na bahagi."
-    },
-    {
-      "step_number": 2,
-      "step_title": "Pagsuri ng POST (Power-On Self-Test)",
-      "step_description": "Kapag pinindot ang power button, magsasagawa ang computer ng Power-On Self-Test (POST), isang diagnostic check upang tiyakin na gumagana ang mga pangunahing bahagi ng hardware tulad ng CPU, RAM, hard drive, at iba pang components. Makikita ang status nito sa screen. Kung may error na lalabas, ito ay isang indikasyon na may sira sa hardware tulad ng RAM o hard drive. Kung walang error, magpapatuloy ang system sa boot process."
-    },
-    {
-      "step_number": 3,
-      "step_title": "Pumunta sa BIOS Setup",
-      "step_description": "Pagkatapos ng POST, ang computer ay magpapakita ng logo ng manufacturer bago mag-boot ang operating system. Upang makapasok sa BIOS, kailangan mong mabilis na pindutin ang tamang key upang makapasok sa BIOS setup. Karaniwan itong 'Delete', 'F2', o 'Esc' depende sa motherboard. Mabilis mong kailangang pindutin ang key na ito bago mag-boot ang operating system."
-    },
-    {
-      "step_number": 4,
-      "step_title": "Pag-configure ng BIOS at Pag-set ng Boot Priority",
-      "step_description": "Sa BIOS setup, maaari mong baguhin ang mga setting ng hardware tulad ng Boot Order, CPU settings, at RAM configuration. Upang baguhin ang **Boot Priority**, hanapin ang 'Boot' o 'Advanced' tab sa BIOS. I-set ang mga devices tulad ng Hard Drive, USB, at CD/DVD sa tamang order para tiyakin na ang unang device na magbo-boot ay ang nais mong gamitin (halimbawa, ang USB kung mag-i-install ka ng OS). Matapos baguhin ang settings, siguraduhing i-save ang mga ito at lumabas sa BIOS."
-    },
-    {
-      "step_number": 5,
-      "step_title": "I-save ang mga Pagbabago at I-restart",
-      "step_description": "Matapos baguhin ang mga setting sa BIOS, siguraduhing i-save ang mga pagbabago at lumabas sa BIOS setup. Piliin ang 'Save and Exit' na option upang masigurado na mai-apply ang mga pagbabago. I-restart ang computer upang magsimula ang bagong boot process gamit ang mga bagong BIOS settings."
-    },
-    {
-      "step_number": 6,
-      "step_title": "Pagsubok ng Computer Unit",
-      "step_description": "Pagkatapos ng BIOS configuration, magsagawa ng test sa buong system upang matiyak na gumagana ang lahat ng components ng computer. I-check ang keyboard, mouse, at monitor kung walang problema. Kung walang error message na lumabas sa POST, ibig sabihin ay gumagana nang maayos ang hardware. Maaari nang magpatuloy sa pag-boot ng operating system at mag-install ng mga kinakailangang software at drivers."
-    }
-  ],
-  "conclusion": "Sa araling ito, natutunan mong mag-test ng computer unit at mag-configure ng BIOS upang matiyak ang optimal na performance ng system. Ang BIOS configuration ay isang mahalagang bahagi ng pag-setup ng computer, kaya't makakatulong ito sa pagpapabuti ng performance at functionality ng system. Ang mga hakbang na ito ay magbibigay sa iyo ng tamang kaalaman sa pag-manage at pag-setup ng hardware ng iyong computer."
+  "lesson2": {
+    "lesson_title": "Pagsubok ng Computer Unit at Pag-configure ng BIOS",
+    "lesson_description": "Sa araling ito, matututuhan mo kung paano mag-test ng computer unit at kung paano mag-configure ng BIOS upang matiyak ang tamang setup ng hardware at mai-optimize ang performance ng system. Tatalakayin ang mga hakbang mula sa pag-setup ng hardware, pagsusuri ng POST, hanggang sa BIOS configuration at pag-test ng unit.",
+    "objectives": [
+      "Matutunan ang mga hakbang sa pagsubok ng computer unit at BIOS.",
+      "Matutunang mag-configure ng BIOS para sa optimal na performance ng system.",
+      "Maging pamilyar sa mga BIOS settings na pwedeng baguhin para sa system optimization.",
+      "Tiyakin na gumagana ng maayos ang lahat ng hardware components sa computer unit."
+    ],
+    "materials_needed": [
+      "Computer unit",
+      "Keyboard at mouse",
+      "Monitor",
+      "Power cable",
+      "USB flash drive (para sa BIOS update kung kinakailangan)",
+      "Screwdriver (kung kinakailangan upang buksan ang case ng computer)"
+    ],
+    "step_by_step_procedure": [
+      {
+        "step_number": 1,
+        "step_title": "I-set up ang Hardware",
+        "step_description": "Ang unang hakbang ay tiyakin na ang lahat ng peripherals (keyboard, mouse, monitor, power cable) ay nakakabit nang maayos sa computer. Pagkatapos, i-on ang computer at tiyakin na walang mga loose connections na maaaring magdulot ng problema. Siguraduhing nakapasok nang maayos ang mga cables sa mga ports at walang maluwag na bahagi."
+      },
+      {
+        "step_number": 2,
+        "step_title": "Pagsuri ng POST (Power-On Self-Test)",
+        "step_description": "Kapag pinindot ang power button, magsasagawa ang computer ng Power-On Self-Test (POST), isang diagnostic check upang tiyakin na gumagana ang mga pangunahing bahagi ng hardware tulad ng CPU, RAM, hard drive, at iba pang components. Makikita ang status nito sa screen. Kung may error na lalabas, ito ay isang indikasyon na may sira sa hardware tulad ng RAM o hard drive. Kung walang error, magpapatuloy ang system sa boot process."
+      },
+      {
+        "step_number": 3,
+        "step_title": "Pumunta sa BIOS Setup",
+        "step_description": "Pagkatapos ng POST, ang computer ay magpapakita ng logo ng manufacturer bago mag-boot ang operating system. Upang makapasok sa BIOS, kailangan mong mabilis na pindutin ang tamang key upang makapasok sa BIOS setup. Karaniwan itong 'Delete', 'F2', o 'Esc' depende sa motherboard. Mabilis mong kailangang pindutin ang key na ito bago mag-boot ang operating system."
+      },
+      {
+        "step_number": 4,
+        "step_title": "Pag-configure ng BIOS at Pag-set ng Boot Priority",
+        "step_description": "Sa BIOS setup, maaari mong baguhin ang mga setting ng hardware tulad ng Boot Order, CPU settings, at RAM configuration. Upang baguhin ang **Boot Priority**, hanapin ang 'Boot' o 'Advanced' tab sa BIOS. I-set ang mga devices tulad ng Hard Drive, USB, at CD/DVD sa tamang order para tiyakin na ang unang device na magbo-boot ay ang nais mong gamitin (halimbawa, ang USB kung mag-i-install ka ng OS). Matapos baguhin ang settings, siguraduhing i-save ang mga ito at lumabas sa BIOS."
+      },
+      {
+        "step_number": 5,
+        "step_title": "I-save ang mga Pagbabago at I-restart",
+        "step_description": "Matapos baguhin ang mga setting sa BIOS, siguraduhing i-save ang mga pagbabago at lumabas sa BIOS setup. Piliin ang 'Save and Exit' na option upang masigurado na mai-apply ang mga pagbabago. I-restart ang computer upang magsimula ang bagong boot process gamit ang mga bagong BIOS settings."
+      },
+      {
+        "step_number": 6,
+        "step_title": "Pagsubok ng Computer Unit",
+        "step_description": "Pagkatapos ng BIOS configuration, magsagawa ng test sa buong system upang matiyak na gumagana ang lahat ng components ng computer. I-check ang keyboard, mouse, at monitor kung walang problema. Kung walang error message na lumabas sa POST, ibig sabihin ay gumagana nang maayos ang hardware. Maaari nang magpatuloy sa pag-boot ng operating system at mag-install ng mga kinakailangang software at drivers."
+      }
+    ],
+    "conclusion": "Sa araling ito, natutunan mong mag-test ng computer unit at mag-configure ng BIOS upang matiyak ang optimal na performance ng system. Ang BIOS configuration ay isang mahalagang bahagi ng pag-setup ng computer, kaya't makakatulong ito sa pagpapabuti ng performance at functionality ng system. Ang mga hakbang na ito ay magbibigay sa iyo ng tamang kaalaman sa pag-manage at pag-setup ng hardware ng iyong computer."
+  }
 }
