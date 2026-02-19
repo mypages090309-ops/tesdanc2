@@ -29,22 +29,35 @@
       <p>Your training progress overview</p>
     </header>
 
+    <!-- Enrollment Status + Dynamic Sections -->
     <div class="cards">
+
       <div class="card">
         <h3>Enrollment Status</h3>
         <p id="enrollmentStatus">Loading...</p>
       </div>
 
-      <div class="card">
-        <h3>Submitted Requirements</h3>
-        <p>3 / 5 Completed</p>
+    </div>
+
+    <!-- LOCKED CONTENT (Hidden until approved) -->
+    <div id="lockedContent" style="display:none;">
+
+      <div class="cards" style="margin-top:20px;">
+
+        <div class="card">
+          <h3>Submitted Requirements</h3>
+          <p>3 / 5 Completed</p>
+        </div>
+
+        <div class="card">
+          <h3>Training Schedule</h3>
+          <p>Not Yet Assigned</p>
+        </div>
+
       </div>
 
-      <div class="card">
-        <h3>Training Schedule</h3>
-        <p>Not Yet Assigned</p>
-      </div>
     </div>
+
   </main>
 
 </div>
