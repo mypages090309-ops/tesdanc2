@@ -16,6 +16,16 @@ body {
     font-weight: 600;
     letter-spacing: 1px;
     border-bottom: 4px solid #1d4ed8; /* Added bottom border to make it stand out */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Add glossy effect when scrolling */
+.main-header.scrolled {
+    background-color: rgba(15, 23, 42, 0.9); /* Transparent with dark background */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
 
 /* Dashboard layout */
@@ -120,11 +130,6 @@ body {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     font-size: 16px;
     color: #555;
-    transition: transform 0.3s ease-in-out;
-}
-
-#lesson-details:hover {
-    transform: translateY(-5px); /* Add subtle lift effect on hover */
 }
 
 /* Responsive design */
