@@ -6,7 +6,13 @@ function loadLesson(lessonId) {
     // Set the URL based on the lesson selected
     const lessonUrl = lessonId === 'lesson1'
         ? 'https://raw.githubusercontent.com/mypages090309-ops/tesdanc2/main/assets/json/lesson1.json'
-        : 'https://raw.githubusercontent.com/mypages090309-ops/tesdanc2/main/assets/json/lesson2.json';  // Updated for lesson2
+        : ''; // Removed lesson2 URL
+
+    if (lessonUrl === '') {
+        lessonTitle.textContent = "Lesson not available";
+        lessonDetails.innerHTML = "<p>This lesson is currently unavailable.</p>";
+        return;
+    }
 
     fetch(lessonUrl)
         .then(response => response.json())
