@@ -36,11 +36,13 @@ body {
   cursor: pointer;
   margin-bottom: 10px;
   transition: .3s ease;
+  color: white;  /* Siguraduhing puti ang kulay ng text */
 }
 
 .sidebar li:hover,
 .sidebar .active {
   background: #2563eb;
+  color: white;  /* Siguraduhing puti ang kulay ng text kahit naka-hover */
 }
 
 .main-content {
@@ -65,7 +67,7 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, .05);
 }
 
-/* Remove underline and color links white for sidebar */
+/* Para sa links sa loob ng sidebar */
 .sidebar-content {
   display: none; /* Initially hidden */
   padding-left: 20px;
@@ -78,18 +80,18 @@ body {
 }
 
 .sidebar-content a {
-  text-decoration: none; /* Remove underline */
-  color: white; /* White color for the links */
+  text-decoration: none; /* Walang underline */
+  color: white; /* Puti ang kulay ng mga link */
 }
 
 .sidebar-content a:hover {
-  color: #2563eb; /* Change color to blue on hover */
-  text-decoration: none; /* Ensure no underline on hover */
+  color: #2563eb; /* Pag blue kapag ni-hover */
+  text-decoration: none; /* Walang underline sa hover */
 }
 
-/* Ensure all sidebar links (including Logout) have consistent appearance */
+/* Siguraduhin na ang active state ng mga link ay tama */
 .sidebar-content a.active {
-  color: #2563eb; /* Make active links blue */
+  color: #2563eb; /* Blue ang kulay ng active na link */
 }
 
 .accordion-button {
