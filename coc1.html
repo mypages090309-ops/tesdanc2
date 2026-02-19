@@ -46,16 +46,35 @@
         // Adjusted to use lesson.js and coc1lessonworker
         const lessonUrl = lessonId === 'lesson1'
             ? 'https://tesda-auth-api.nextwavehub01.workers.dev/lesson1.json'  // Existing worker for lesson1
-            : 'https://coc1lessonworker.nextwavehub01.workers.dev/lesson2.json';  // New worker URL for lesson2
+            : lessonId === 'lesson2' 
+                ? 'https://coc1lessonworker.nextwavehub01.workers.dev/lesson2.json'  // New worker URL for lesson2
+                : '';  // Default case if no lesson matches
 
         fetch(lessonUrl)
             .then(response => response.json())
             .then(data => {
                 const lesson = data[lessonId]; // Dynamically load lesson based on lessonId
                 if (lesson) {
-                    document.getElementById("lesson-title").innerText = lesson.title;
+                    document.getElementById("lesson-title").innerText = lesson.lesson_title; // Access lesson_title in lesson2.json
                     document.getElementById("lesson-details").innerHTML = `
-                        <p>${lesson.content}</p>
+                        <p>${lesson.lesson_description}</p>
+                        <h3>Objectives:</h3>
+                        <ul>
+                            ${lesson.objectives.map(obj => `<li>${obj}</li>`).join('')}
+                        </ul>
+                        <h3>Materials Needed:</h3>
+                        <ul>
+                            ${lesson.materials_needed.map(mat => `<li>${mat}</li>`).join('')}
+                        </ul>
+                        <h3>Step-by-Step Procedure:</h3>
+                        <ol>
+                            ${lesson.step_by_step_procedure.map(step => `
+                                <li>
+                                    <strong>${step.step_title}:</strong> ${step.step_description}
+                                </li>`).join('')}
+                        </ol>
+                        <h3>Conclusion:</h3>
+                        <p>${lesson.conclusion}</p>
                     `;
                 } else {
                     document.getElementById("lesson-title").innerText = "Lesson not found";
@@ -82,5 +101,3 @@
 <script src="assets/js/coc1.js"></script> <!-- Correct JS path -->
 </body>
 </html>
-
-
