@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COC 1 | CSS NC II</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/coc1.css">
+</head>
+<body>
+
+<div class="dashboard">
+  <aside class="sidebar">
+    <h2>Student Panel</h2>
+    <ul>
+      <li><a href="student-dashboard.html">Dashboard</a></li>
+      <li><a href="coc1.html">COC 1</a></li>
+      <li><a href="coc2.html">COC 2</a></li>
+      <li><a href="coc3.html">COC 3</a></li>
+      <li><a href="coc4.html">COC 4</a></li>
+      <li><a href="#">Profile</a></li>
+      <li><a href="#" id="logoutBtn">Logout</a></li>
+    </ul>
+  </aside>
+
+  <main class="main-content">
+    <header>
+      <h1>COC 1 - Course Overview</h1>
+      <p>This section focuses on the basics of computer system assembly and installation.</p>
+    </header>
+
+    <!-- Lesson 1: Assembly and Disassembly -->
+    <section class="lesson" id="lesson1">
+      <h2>Lesson 1: Assembly and Disassembly of Computer Unit</h2>
+      <p>In this lesson, we will go over the basic steps to disassemble and reassemble a computer unit.</p>
+
+      <!-- Video Tutorial for Lesson 1 -->
+      <div class="video-container">
+        <video controls>
+          <source src="assets/videos/lesson1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <h3>Step-by-Step Procedure</h3>
+      <ol>
+        <li>Prepare the necessary tools (screwdrivers, anti-static wrist strap, etc.).</li>
+        <li>Disassemble the computer by opening the case and removing internal components (RAM, HDD, etc.).</li>
+        <li>Assemble the computer by placing the components back in their respective slots.</li>
+        <li>Test the computer and ensure everything is working, including BIOS settings.</li>
+      </ol>
+      <button id="nextLessonBtn">Next Lesson</button>
+    </section>
+
+    <!-- Lesson 2: Create Bootable USB -->
+    <section class="lesson" id="lesson2">
+      <h2>Lesson 2: Prepare Bootable USB</h2>
+      <p>This lesson teaches how to create a bootable USB drive using Rufus for OS installation.</p>
+
+      <!-- Video Tutorial for Lesson 2 -->
+      <div class="video-container">
+        <video controls>
+          <source src="assets/videos/lesson2.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <h3>Step-by-Step Procedure</h3>
+      <ol>
+        <li>Download Rufus and install it.</li>
+        <li>Prepare a USB drive (at least 8GB) and choose it in the Rufus interface.</li>
+        <li>Select the Windows ISO file and the appropriate partition scheme (GPT for UEFI).</li>
+        <li>Click Start to create the bootable USB.</li>
+      </ol>
+      <button id="nextLessonBtn2">Next Lesson</button>
+    </section>
+
+    <!-- Additional Lessons would follow the same structure -->
+
+  </main>
+</div>
+
+<script src="assets/js/coc1.js"></script>
+</body>
+</html>
