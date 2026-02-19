@@ -85,6 +85,7 @@ document.getElementById('quiz-form')?.addEventListener('submit', function(event)
     let score = 0;
     const quizData = JSON.parse(localStorage.getItem('lessonData')).quiz;
     
+    // Loop through the quiz questions and check the answers
     quizData.forEach((question, index) => {
         const selectedAnswer = document.querySelector(`input[name="q${index}"]:checked`);
         if (selectedAnswer && selectedAnswer.value === question.answer) {
@@ -97,7 +98,7 @@ document.getElementById('quiz-form')?.addEventListener('submit', function(event)
         `Congratulations! You passed the quiz with ${score}/10.` :
         `Sorry, you scored ${score}/10. Please review the lesson and try again.`;
 
-    // Show the feedback message before closing the quiz modal
+    // Show the feedback message in an alert
     alert(feedbackMessage);
 
     // Disable or enable Next Topic based on score
