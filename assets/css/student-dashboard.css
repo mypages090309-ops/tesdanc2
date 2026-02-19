@@ -1,3 +1,4 @@
+/* student_dashboard.css */
 *{
   margin:0;
   padding:0;
@@ -62,4 +63,40 @@ body{
   padding:25px;
   border-radius:12px;
   box-shadow:0 10px 30px rgba(0,0,0,.05);
+}
+
+/* Accordion styling for COC links */
+.sidebar-content {
+    display: none; /* Initially hidden */
+    padding-left: 20px;
+    margin-top: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.sidebar-content li {
+    margin-bottom: 10px;
+}
+
+.sidebar-content a {
+    text-decoration: none; /* Remove underline */
+    color: #007bff; /* Blue color for links */
+}
+
+.sidebar-content a:hover {
+    color: #0056b3; /* Darker blue when hovering */
+}
+
+.accordion-button {
+    background-color: transparent;
+    color: #007bff;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.accordion-button:hover {
+    background-color: #f0f0f0;
 }
