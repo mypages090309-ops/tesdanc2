@@ -20,7 +20,7 @@
     <h2>COC 1 Lessons</h2>
     <ul>
       <li onclick="loadLesson('lesson1')">Assembly and Disassembly of Computer Unit</li>
-      <li onclick="loadLesson('lesson2')">Test the Computer Unit and Configure BIOS</li> <!-- This is where the lesson2.json should show -->
+      <li onclick="loadLesson('lesson2')">Test the Computer Unit and Configure BIOS</li> <!-- Lesson2 fetch logic -->
       <li onclick="loadLesson('lesson3')">Prepare the Bootable USB Installers</li>
       <li onclick="loadLesson('lesson4')">Install Drivers & Share Printer</li>
       <li onclick="loadLesson('lesson5')">Configure Computer Systems</li>
@@ -43,9 +43,10 @@
 <script>
     // Function to load lesson details dynamically into the content area
     function loadLesson(lessonId) {
+        // Adjusted to use lesson.js and coc1lessonworker
         const lessonUrl = lessonId === 'lesson1'
             ? 'https://tesda-auth-api.nextwavehub01.workers.dev/lesson1.json'  // Existing worker for lesson1
-            : 'https://coc1lessonworker.nextwavehub01.workers.dev/lesson2.json';  // Worker URL for lesson2 (coc1lessonworker)
+            : 'https://coc1lessonworker.nextwavehub01.workers.dev/lesson2.json';  // New worker URL for lesson2
 
         fetch(lessonUrl)
             .then(response => response.json())
@@ -72,6 +73,9 @@
     function closeWindow() {
         document.getElementById("lesson-details").innerHTML = "<p>Select a lesson from the sidebar to view details.</p>";
         document.getElementById("lesson-title").innerText = "Welcome to COC1 - Install and Configure Computer Systems";
+        
+        // Resetting or loading default lesson on close
+        loadLesson('lesson1'); // Optionally load 'lesson1' or any default lesson
     }
 </script>
 
