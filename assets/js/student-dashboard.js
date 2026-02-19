@@ -1,3 +1,4 @@
+/* student-dashboard.js */
 const API_URL = "https://tesda-auth-api.nextwavehub01.workers.dev";
 
 const isLoggedIn = localStorage.getItem("loggedIn");
@@ -51,7 +52,7 @@ document.getElementById("logoutBtn").addEventListener("click", function () {
   window.location.href = "login.html";
 });
 
-// Function to toggle the visibility of COCs under My Enrollment
+// Toggle functionality for My Enrollment
 document.getElementById("enrollmentBtn").addEventListener("click", function () {
   var enrollmentContent = document.getElementById("enrollmentContent");
   if (enrollmentContent.style.display === "block") {
@@ -60,4 +61,3 @@ document.getElementById("enrollmentBtn").addEventListener("click", function () {
     enrollmentContent.style.display = "block";
   }
 });
-
