@@ -19,17 +19,17 @@ async function loadStudentData() {
     }
 
     const statusElement = document.getElementById("enrollmentStatus");
-    const cocLinks = document.querySelectorAll(".coc-links");
+    const enrollmentList = document.getElementById("enrollmentList");
 
     if (data.enrollment_status === "Approved") {
       statusElement.innerHTML = `<span style="color:green;font-weight:600;">Enrollment Approved ✅</span>`;
-      cocLinks.forEach(link => link.style.display = "block"); // Show COC links
+      enrollmentList.style.display = "block"; // Show COC links
     } else if (data.enrollment_status === "Rejected") {
       statusElement.innerHTML = `<span style="color:red;font-weight:600;">Enrollment Rejected ❌</span>`;
-      cocLinks.forEach(link => link.style.display = "none"); // Hide COC links
+      enrollmentList.style.display = "none"; // Hide COC links
     } else {
       statusElement.innerHTML = `<span style="color:orange;font-weight:600;">Waiting for Approval ⏳</span>`;
-      cocLinks.forEach(link => link.style.display = "none"); // Hide COC links
+      enrollmentList.style.display = "none"; // Hide COC links
     }
   } catch (err) {
     console.error("Failed to load student data");
@@ -38,16 +38,16 @@ async function loadStudentData() {
 
 loadStudentData();
 
-// Show/Hide COC links when "My Enrollment" is clicked
+// Toggle COC links when "My Enrollment" is clicked
 document.getElementById("myEnrollment").addEventListener("click", function() {
-  const cocLinks = document.querySelectorAll(".coc-links");
-  cocLinks.forEach(link => {
-    if (link.style.display === "none") {
-      link.style.display = "block";
-    } else {
-      link.style.display = "none";
-    }
-  });
+  const enrollmentList = document.getElementById("enrollmentList");
+  const isListVisible = enrollmentList.style.display === "block";
+
+  // Toggle visibility of the COCs
+  enrollmentList.style.display = isListVisible ? "none" : "block";
+
+  // Toggle active class on My Enrollment
+  this.classList.toggle("active");
 });
 
 document.getElementById("logoutBtn").addEventListener("click", function() {
