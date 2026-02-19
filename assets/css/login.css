@@ -1,0 +1,126 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter',sans-serif;
+}
+
+body{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#0f172a,#1e293b);
+  overflow:hidden;
+  position:relative;
+}
+
+/* animated background */
+body::before{
+  content:"";
+  position:absolute;
+  width:150%;
+  height:150%;
+  top:-25%;
+  left:-25%;
+  background:radial-gradient(circle at 30% 30%, rgba(37,99,235,0.25), transparent 40%),
+             radial-gradient(circle at 70% 70%, rgba(59,130,246,0.25), transparent 40%);
+  animation:rotateGradient 20s linear infinite;
+}
+
+@keyframes rotateGradient{
+  from{transform:rotate(0);}
+  to{transform:rotate(360deg);}
+}
+
+.login-wrapper{
+  position:relative;
+  z-index:2;
+  width:100%;
+  max-width:420px;
+  padding:20px;
+}
+
+.login-card{
+  backdrop-filter:blur(20px);
+  background:rgba(255,255,255,.85);
+  padding:40px;
+  border-radius:16px;
+  box-shadow:0 25px 60px rgba(0,0,0,.3);
+}
+
+.login-header{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.login-header h2{
+  margin-bottom:10px;
+}
+
+.login-header p{
+  font-size:14px;
+  color:#475569;
+}
+
+.input-group{
+  margin-bottom:20px;
+}
+
+.input-group label{
+  font-size:14px;
+  display:block;
+  margin-bottom:6px;
+  font-weight:500;
+}
+
+.input-group input{
+  width:100%;
+  padding:10px;
+  border-radius:8px;
+  border:1px solid #cbd5e1;
+  outline:none;
+  transition:.3s ease;
+}
+
+.input-group input:focus{
+  border-color:#2563eb;
+  box-shadow:0 0 0 3px rgba(37,99,235,.2);
+}
+
+.role-select{
+  display:flex;
+  justify-content:space-around;
+  margin-bottom:20px;
+  font-size:14px;
+}
+
+.btn-login{
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:8px;
+  background:#2563eb;
+  color:#fff;
+  font-weight:600;
+  cursor:pointer;
+  transition:.3s ease;
+}
+
+.btn-login:hover{
+  transform:translateY(-3px);
+  box-shadow:0 0 20px rgba(37,99,235,.6);
+}
+
+.login-footer{
+  margin-top:25px;
+  text-align:center;
+  font-size:14px;
+}
+
+.login-footer a{
+  display:block;
+  margin-top:8px;
+  text-decoration:none;
+  color:#2563eb;
+}
