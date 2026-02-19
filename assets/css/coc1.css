@@ -3,7 +3,7 @@ body {
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f1f5f9;
+    background-color: #f7f8fa; /* Slightly off-white background for a cleaner look */
 }
 
 /* Header Style */
@@ -13,7 +13,9 @@ body {
     padding: 20px;
     text-align: center;
     font-size: 32px;
-    font-weight: bold;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-bottom: 4px solid #1d4ed8; /* Added bottom border to make it stand out */
 }
 
 .main-header h1 {
@@ -24,18 +26,22 @@ body {
 .dashboard {
     display: flex;
     min-height: 100vh;
+    border: none;
 }
 
 /* Sidebar */
 .sidebar {
     width: 250px;
-    background: #0f172a; /* Dark color for sidebar */
+    background: #0f172a;
     color: #fff;
-    padding: 30px 20px;
+    padding: 40px 20px;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 .sidebar h2 {
     margin-bottom: 30px;
+    font-size: 22px;
+    font-weight: 600;
 }
 
 .sidebar ul {
@@ -48,35 +54,44 @@ body {
     border-radius: 8px;
     cursor: pointer;
     margin-bottom: 10px;
-    transition: .3s ease;
+    transition: background 0.3s ease, padding-left 0.3s ease; /* Add smooth transition effects */
     font-weight: 500;
 }
 
 .sidebar li:hover {
     background: #2563eb;
+    padding-left: 20px; /* Slightly expand on hover */
+}
+
+.sidebar li.active {
+    background: #1d4ed8; /* Darker background for active item */
 }
 
 .sidebar li a {
     text-decoration: none;
     color: inherit;
+    font-size: 18px;
 }
 
 .sidebar li a:hover {
-    color: #fff;
+    color: white;
 }
 
 /* Content Section */
 .main-content {
     flex: 1;
     padding: 40px;
-    background: #ffffff; /* Light color for content area */
+    background: #ffffff;
     box-sizing: border-box;
-    border-left: 1px solid #e5e5e5; /* Optional: Border to separate sidebar */
+    border-left: 1px solid #e5e5e5;
+    overflow-y: auto; /* Allow scrolling if content overflows */
 }
 
 #lesson-title {
-    font-size: 24px;
+    font-size: 28px;
+    font-weight: 700;
     margin-bottom: 20px;
+    color: #333;
 }
 
 /* Close Button */
@@ -87,19 +102,43 @@ body {
     background-color: red;
     color: white;
     border: none;
-    padding: 10px;
+    padding: 10px 15px;
     font-size: 18px;
     cursor: pointer;
     border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .close-btn:hover {
-    background-color: darkred;
+    background-color: #b91c1c;
 }
 
 /* Lesson Content Styles */
 #lesson-details {
-    background: #f9fafb; /* Light background for details */
+    background: #f9fafb;
     padding: 20px;
     border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: #555;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    #lesson-title {
+        font-size: 24px;
+    }
 }
