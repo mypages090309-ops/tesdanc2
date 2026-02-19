@@ -78,12 +78,13 @@ function hideQuiz() {
     document.getElementById("quiz-modal").style.display = 'none';
 }
 
-// Handle quiz submission and enable next topic
+// Handle quiz submission and show score feedback
 document.getElementById('quiz-form')?.addEventListener('submit', function(event) {
     event.preventDefault();
+    
     let score = 0;
     const quizData = JSON.parse(localStorage.getItem('lessonData')).quiz;
-
+    
     quizData.forEach((question, index) => {
         const selectedAnswer = document.querySelector(`input[name="q${index}"]:checked`);
         if (selectedAnswer && selectedAnswer.value === question.answer) {
@@ -91,11 +92,16 @@ document.getElementById('quiz-form')?.addEventListener('submit', function(event)
         }
     });
 
-    if (score >= 8) {  // Passing rate is 80% (at least 8 correct answers)
-        alert('Congratulations! You passed the quiz.');
-        document.getElementById('next-topic').disabled = false;  // Enable Next Topic
-    } else {
-        alert('Sorry, please review the lesson and try again.');
-        document.getElementById('next-topic').disabled = true;  // Keep Next Topic disabled
-    }
+    // Display score and feedback
+    const feedbackMessage = score >= 8 ? 
+        `Congratulations! You passed the quiz with ${score}/10.` :
+        `Sorry, you scored ${score}/10. Please review the lesson and try again.`;
+
+    alert(feedbackMessage);  // Show feedback message
+
+    // Disable or enable Next Topic based on score
+    document.getElementById('next-topic').disabled = score < 8;  // Enable Next Topic if score >= 8
+
+    // Close the quiz modal after feedback
+    hideQuiz();  // Close modal after showing feedback
 });
