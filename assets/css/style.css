@@ -301,3 +301,34 @@ footer{
     flex-direction:column;
   }
 }
+/* CTA Entrance Animation */
+.cta-buttons {
+  animation: fadeUp 1s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Button micro interaction */
+.cta-buttons .btn {
+  transition: all .3s ease;
+}
+
+.cta-buttons .btn:hover {
+  transform: translateY(-4px) scale(1.02);
+}
+
+/* Hero Buttons Animation */
+.hero-actions {
+  animation: fadeUp 1.2s ease forwards;
+  opacity: 0;
+}
