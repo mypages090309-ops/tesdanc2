@@ -65,7 +65,7 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, .05);
 }
 
-/* Sidebar links with no underline */
+/* Remove underline from sidebar links */
 .sidebar-content {
   display: none; /* Initially hidden */
   padding-left: 20px;
@@ -87,7 +87,6 @@ body {
   text-decoration: none; /* Ensure no underline on hover */
 }
 
-/* Accordion-style button */
 .accordion-button {
   background-color: transparent;
   color: #007bff;
