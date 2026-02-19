@@ -44,6 +44,62 @@
   </main>
 </div>
 
+<script>
+    // Function to load lesson details dynamically into the content area
+    function loadLesson(lessonId) {
+        const lessonDetails = {
+            lesson1: {
+                title: "Assembly and Disassembly of Computer Unit",
+                content: "<p>This lesson covers how to assemble and disassemble a computer unit. It includes step-by-step procedures for handling hardware components carefully and safely.</p>"
+            },
+            lesson2: {
+                title: "Test the Computer Unit and Configure BIOS",
+                content: "<p>This lesson teaches you how to test the computer unit and configure BIOS settings to ensure the system is working properly. It includes the steps for BIOS setup and checking hardware components.</p>"
+            },
+            lesson3: {
+                title: "Prepare the Bootable USB Installers",
+                content: "<p>This lesson explains how to prepare bootable USB installers for operating system installation, including creating the USB drive and setting up the BIOS for booting from USB.</p>"
+            },
+            lesson4: {
+                title: "Install Drivers & Share Printer",
+                content: "<p>This lesson covers how to install drivers for various hardware components and set up printer sharing across multiple computers in a network.</p>"
+            },
+            lesson5: {
+                title: "Configure Computer Systems",
+                content: "<p>This lesson teaches you how to configure computer systems for specific tasks, including system settings and installation of essential software for proper functionality.</p>"
+            },
+            lesson6: {
+                title: "Turn off Firewalls (All Computers)",
+                content: "<p>This lesson focuses on how to disable firewalls on all computers in a network to ensure seamless communication and reduce security interruptions.</p>"
+            },
+            lesson7: {
+                title: "Configure Advanced Sharing (All Computers)",
+                content: "<p>This lesson covers the advanced sharing options for network computers, including file and printer sharing configurations for efficient data management across the network.</p>"
+            },
+            lesson8: {
+                title: "Rename Computers (SERVER: last name, CLIENT: first name)",
+                content: "<p>This lesson teaches you how to rename computers in a network according to a specific naming convention for easy identification and organization.</p>"
+            }
+        };
+
+        // Set the title and content based on the lesson selected
+        const lesson = lessonDetails[lessonId];
+        if (lesson) {
+            document.getElementById("lesson-title").innerText = lesson.title;
+            document.getElementById("lesson-details").innerHTML = lesson.content;
+        } else {
+            document.getElementById("lesson-title").innerText = "Lesson not found";
+            document.getElementById("lesson-details").innerHTML = "<p>Sorry, this lesson is not available.</p>";
+        }
+    }
+
+    // Close the window or lesson content
+    function closeWindow() {
+        document.getElementById("lesson-details").innerHTML = "<p>Select a lesson from the sidebar to view details.</p>";
+        document.getElementById("lesson-title").innerText = "Welcome to COC1 - Install and Configure Computer Systems";
+    }
+</script>
+
 <script src="assets/js/coc1.js"></script> <!-- Correct JS path -->
 </body>
 </html>
