@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Student Dashboard | CSS NC II</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/student-dashboard.css">
 </head>
@@ -13,16 +14,19 @@
   <aside class="sidebar">
     <h2>Student Panel</h2>
     <ul>
-      <li class="active">Dashboard</li>
-      <li id="myEnrollment" class="menu-item">My Enrollment</li>
+      <li class="active"><a href="student-dashboard.html">Dashboard</a></li>
+      <li id="myEnrollment">My Enrollment</li> <!-- This will toggle visibility of COCs -->
+      
+      <!-- Initially hidden COCs -->
       <ul id="enrollmentList" class="hidden">
-        <li><a href="coc1.html">COC 1</a></li>
-        <li><a href="coc2.html">COC 2</a></li>
-        <li><a href="coc3.html">COC 3</a></li>
-        <li><a href="coc4.html">COC 4</a></li>
+        <li><a href="coc1.html">COC1</a></li>
+        <li><a href="coc2.html">COC2</a></li>
+        <li><a href="coc3.html">COC3</a></li>
+        <li><a href="coc4.html">COC4</a></li>
       </ul>
-      <li><a href="profile.html">Profile</a></li>
-      <li><a href="logout.html" id="logoutBtn">Logout</a></li>
+
+      <li><a href="#">Profile</a></li>
+      <li><a href="#" id="logoutBtn">Logout</a></li>
     </ul>
   </aside>
 
@@ -32,15 +36,24 @@
       <p>Your CSS NC II training overview</p>
     </header>
 
+    <!-- Enrollment Status -->
     <div class="cards">
       <div class="card">
         <h3>Enrollment Status</h3>
-        <p>Enrollment Approved ✅</p>
+        <p id="enrollmentStatus">Loading...</p>
       </div>
+    </div>
+
+    <!-- Course Overview -->
+    <div class="cards">
       <div class="card">
         <h3>Course Overview</h3>
         <p>CSS NC II consists of 4 COCs (Certificate of Competency).</p>
       </div>
+    </div>
+
+    <!-- Training Progress -->
+    <div class="cards">
       <div class="card">
         <h3>Training Progress</h3>
         <p>Progress tracking coming soon...</p>
