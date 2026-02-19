@@ -15,13 +15,13 @@
   <aside class="sidebar">
     <h2>Student Panel</h2>
     <ul>
-      <li class="active">Dashboard</li>
-      <li id="myEnrollmentBtn">My Enrollment</li> <!-- Button for toggling COCs -->
-      <li>COC1</li>
-      <li>COC2</li>
-      <li>COC3</li>
-      <li>COC4</li>
-      <li>Profile</li>
+      <li class="active"><a href="student-dashboard.html">Dashboard</a></li>
+      <li><a href="#" id="myEnrollment">My Enrollment</a></li> <!-- This will toggle visibility of COCs -->
+      <li class="coc-links" style="display:none;"><a href="coc1.html">COC1</a></li>
+      <li class="coc-links" style="display:none;"><a href="coc2.html">COC2</a></li>
+      <li class="coc-links" style="display:none;"><a href="coc3.html">COC3</a></li>
+      <li class="coc-links" style="display:none;"><a href="coc4.html">COC4</a></li>
+      <li><a href="#">Profile</a></li>
       <li id="logoutBtn">Logout</li>
     </ul>
   </aside>
@@ -32,39 +32,28 @@
       <p>Your CSS NC II training overview</p>
     </header>
 
+    <!-- Enrollment Status -->
     <div class="cards">
       <div class="card">
         <h3>Enrollment Status</h3>
-        <p>Enrollment Approved ✅</p>
+        <p id="enrollmentStatus">Loading...</p>
       </div>
+    </div>
 
+    <!-- Course Overview -->
+    <div class="cards">
       <div class="card">
         <h3>Course Overview</h3>
         <p>CSS NC II consists of 4 COCs (Certificate of Competency).</p>
       </div>
+    </div>
 
+    <!-- Training Progress -->
+    <div class="cards">
       <div class="card">
         <h3>Training Progress</h3>
         <p>Progress tracking coming soon...</p>
       </div>
-    </div>
-
-    <!-- Hidden COC Sections -->
-    <div class="coc-section hidden">
-      <h3>COC1</h3>
-      <p>Content of COC 1...</p>
-    </div>
-    <div class="coc-section hidden">
-      <h3>COC2</h3>
-      <p>Content of COC 2...</p>
-    </div>
-    <div class="coc-section hidden">
-      <h3>COC3</h3>
-      <p>Content of COC 3...</p>
-    </div>
-    <div class="coc-section hidden">
-      <h3>COC4</h3>
-      <p>Content of COC 4...</p>
     </div>
 
   </main>
