@@ -154,23 +154,37 @@ body {
     margin-bottom: 20px; /* Space between paragraphs */
 }
 
-/* Image Styling */
+/* Image Styling for parts of computer */
+#lesson-details .part-image {
+    max-width: 100%;   /* Responsive width */
+    height: auto;      /* Maintain aspect ratio */
+    margin-top: 10px;  /* Space between text and image */
+    margin-bottom: 20px; /* Add space after each image */
+    display: block;
+    width: 150px;      /* Set a fixed width for uniformity */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Image Styling for Step-by-Step Procedure */
 #lesson-details img {
     max-width: 100%;  /* Ensure responsive width */
     height: auto;     /* Maintain aspect ratio */
-    margin-top: 20px; /* Add space between the text and image */
+    width: 80%;       /* Set a fixed size for the images */
+    margin-top: 10px; /* Add space between the text and image */
     display: block;   /* Make the image a block element */
+    margin-left: auto; /* Center the image horizontally */
+    margin-right: auto; /* Center the image horizontally */
     margin-bottom: 20px; /* Add space after each image */
 }
 
-/* Adjust space for images inside 'parts_of_computer' */
-#lesson-details .part-image {
-    margin: 20px 0;   /* Add top and bottom margin */
-    width: 200px;     /* Set a smaller width for consistency */
-    height: auto;
+/* Image Size Fix for Steps */
+#lesson-details .step-image {
+    max-width: 100%;  /* Ensure responsive width */
+    height: auto;     /* Maintain aspect ratio */
+    width: 80%;       /* Adjust width for a consistent look */
     display: block;
-    margin-left: auto; /* Center image horizontally */
-    margin-right: auto; /* Center image horizontally */
+    margin: 10px auto;  /* Center and add margin */
 }
 
 /* Responsive design */
