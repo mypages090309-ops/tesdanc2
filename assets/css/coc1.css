@@ -1,25 +1,37 @@
+/* General Reset and Styles */
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f4f7f6;
   margin: 0;
   padding: 0;
+  background-color: #f4f7f6;
 }
 
 .course-overview {
   padding: 40px;
+  background-color: white;
+  margin: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.1);
 }
 
 h1 {
+  font-size: 28px;
   color: #333;
+  margin-bottom: 20px;
 }
 
-.lesson-list h2 {
+h2 {
+  font-size: 20px;
   color: #2563eb;
+  margin-top: 20px;
 }
 
-.lesson-list p {
+p {
   font-size: 16px;
   color: #555;
+}
+
+.lesson-list {
+  margin-bottom: 40px;
 }
 
 .start-button {
@@ -33,8 +45,31 @@ h1 {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 16px;
 }
 
 .start-button button:hover {
+  background-color: #1d46b3;
+}
+
+.lesson-container {
+  display: none;
+  padding: 20px;
+  background-color: white;
+  margin: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.1);
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
   background-color: #1d46b3;
 }
