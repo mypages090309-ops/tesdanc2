@@ -21,6 +21,19 @@
             <li><a href="#requirementsSection">Requirements</a></li>
             <li><a href="#profileSection">Profile</a></li>
             <li id="logoutBtn">Logout</li>
+
+            <!-- Accordion-style COC Links -->
+            <li>
+                <button class="accordion-button" onclick="toggleAccordion('cocAccordion')">COC Sections</button>
+                <div id="cocAccordion" class="accordion-content">
+                    <ul>
+                        <li><a href="coc1.html">COC 1: Install and Configure Computer Systems</a></li>
+                        <li><a href="coc2.html">COC 2: Set Up Computer Networks</a></li>
+                        <li><a href="coc3.html">COC 3: Set Up Computer Servers</a></li>
+                        <li><a href="coc4.html">COC 4: Maintain and Repair Computer Systems</a></li>
+                    </ul>
+                </div>
+            </li>
         </ul>
     </aside>
 
@@ -30,7 +43,7 @@
             <p>Your training progress overview</p>
         </header>
 
-        <!-- Enrollment Status -->
+        <!-- Enrollment Status + Dynamic Sections -->
         <div class="cards" id="enrollmentStatusSection">
             <div class="card">
                 <h3>Enrollment Status</h3>
@@ -38,61 +51,11 @@
             </div>
         </div>
 
-        <!-- My Enrollment Section with Expandable COC Sections -->
+        <!-- My Enrollment Section -->
         <div class="cards" style="margin-top:20px;">
             <div class="card">
                 <h3>My Enrollment</h3>
-
-                <!-- Accordion for COCs -->
-                <div class="accordion">
-                    <!-- COC 1 -->
-                    <div class="accordion-item">
-                        <button class="accordion-button" onclick="toggleAccordion('coc1')">COC 1: Install and Configure Computer Systems</button>
-                        <div id="coc1" class="accordion-content">
-                            <ul>
-                                <li><a href="coc1_lesson1.html">Lesson 1: Assembly and Disassembly</a></li>
-                                <li><a href="coc1_lesson2.html">Lesson 2: Install OS</a></li>
-                                <li><a href="coc1_lesson3.html">Lesson 3: Configure System</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- COC 2 -->
-                    <div class="accordion-item">
-                        <button class="accordion-button" onclick="toggleAccordion('coc2')">COC 2: Set Up Computer Networks</button>
-                        <div id="coc2" class="accordion-content">
-                            <ul>
-                                <li><a href="coc2_lesson1.html">Lesson 1: Cable Preparation</a></li>
-                                <li><a href="coc2_lesson2.html">Lesson 2: Router Configuration</a></li>
-                                <li><a href="coc2_lesson3.html">Lesson 3: Network Testing</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- COC 3 -->
-                    <div class="accordion-item">
-                        <button class="accordion-button" onclick="toggleAccordion('coc3')">COC 3: Set Up Computer Servers</button>
-                        <div id="coc3" class="accordion-content">
-                            <ul>
-                                <li><a href="coc3_lesson1.html">Lesson 1: Active Directory</a></li>
-                                <li><a href="coc3_lesson2.html">Lesson 2: DNS Configuration</a></li>
-                                <li><a href="coc3_lesson3.html">Lesson 3: DHCP Setup</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- COC 4 -->
-                    <div class="accordion-item">
-                        <button class="accordion-button" onclick="toggleAccordion('coc4')">COC 4: Maintain and Repair Computer Systems</button>
-                        <div id="coc4" class="accordion-content">
-                            <ul>
-                                <li><a href="coc4_lesson1.html">Lesson 1: System Maintenance</a></li>
-                                <li><a href="coc4_lesson2.html">Lesson 2: Troubleshooting</a></li>
-                                <li><a href="coc4_lesson3.html">Lesson 3: System Repair</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                <p>Details about enrollment status, program, etc.</p>
             </div>
         </div>
 
