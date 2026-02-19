@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COC 1 - Lesson 1 | CSS NC II</title>
+    <title>COC 1 - Course Overview</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/coc1.css">
 </head>
@@ -11,25 +11,45 @@
 
 <div class="lesson-container">
     <h2>COC 1 - Course Overview</h2>
-    <h3>Lesson 1: Assembly and Disassembly of Computer Unit</h3>
 
-    <!-- Video or tutorial here -->
-    <video width="100%" controls>
-        <source src="assets/videos/lesson1.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+    <!-- Lesson 1 -->
+    <div id="lesson1" class="lesson">
+        <h3>Lesson 1: Assembly and Disassembly of Computer Unit</h3>
+        <video width="100%" controls>
+            <source src="assets/videos/lesson1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h4>Step-by-Step Procedure</h4>
+        <ul>
+            <li>Prepare the necessary tools (screwdrivers, anti-static wrist strap, etc.).</li>
+            <li>Disassemble the computer by opening the case and removing internal components (RAM, HDD, etc.).</li>
+            <li>Assemble the computer by placing the components back in their respective slots.</li>
+            <li>Test the computer and ensure everything is working, including BIOS settings.</li>
+        </ul>
+    </div>
 
-    <h4>Step-by-Step Procedure</h4>
-    <ul>
-        <li>Prepare the necessary tools (screwdrivers, anti-static wrist strap, etc.).</li>
-        <li>Disassemble the computer by opening the case and removing internal components (RAM, HDD, etc.).</li>
-        <li>Assemble the computer by placing the components back in their respective slots.</li>
-        <li>Test the computer and ensure everything is working, including BIOS settings.</li>
-    </ul>
+    <!-- Lesson 2 -->
+    <div id="lesson2" class="lesson" style="display:none;">
+        <h3>Lesson 2: Prepare Bootable USB</h3>
+        <video width="100%" controls>
+            <source src="assets/videos/lesson2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h4>Step-by-Step Procedure</h4>
+        <ul>
+            <li>Download Rufus software and install it.</li>
+            <li>Plug in a USB drive and open Rufus.</li>
+            <li>Select the bootable OS ISO file and configure settings.</li>
+            <li>Click Start to create the bootable USB.</li>
+        </ul>
+    </div>
+
+    <!-- Add more lessons here -->
 
     <!-- Navigation buttons -->
     <div class="lesson-navigation">
-        <button id="nextLessonBtn">Next Lesson</button>
+        <button id="previousLessonBtn" onclick="navigateLesson(-1)" style="display:none;">Previous Lesson</button>
+        <button id="nextLessonBtn" onclick="navigateLesson(1)">Next Lesson</button>
     </div>
 </div>
 
