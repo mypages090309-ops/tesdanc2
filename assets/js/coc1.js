@@ -5,14 +5,8 @@ function loadLesson(lessonId) {
 
     // Set the URL based on the lesson selected
     const lessonUrl = lessonId === 'lesson1'
-        ? 'https://raw.githubusercontent.com/mypages090309-ops/tesdanc2/main/assets/json/lesson1.json'
-        : ''; // Removed lesson2 URL
-
-    if (lessonUrl === '') {
-        lessonTitle.textContent = "Lesson not available";
-        lessonDetails.innerHTML = "<p>This lesson is currently unavailable.</p>";
-        return;
-    }
+        ? 'https://tesda-auth-api.nextwavehub01.workers.dev/lesson1.json'  // Existing worker for lesson1
+        : 'https://coc1lessonworker.nextwavehub01.workers.dev/lesson2.json';  // New worker URL for lesson2
 
     fetch(lessonUrl)
         .then(response => response.json())
@@ -20,38 +14,37 @@ function loadLesson(lessonId) {
             const lesson = data[lessonId];  // Dynamically load lesson based on lessonId
 
             if (lesson) {
-                lessonTitle.textContent = lesson.title;
-
+                lessonTitle.textContent = lesson.lesson_title; // Access lesson_title in lesson2.json
                 lessonDetails.innerHTML = `
-                    <p>${lesson.overview}</p>
-
-                    <h3>Mga Bahagi ng Computer:</h3>
+                    <p>${lesson.lesson_description}</p>
+                    <h3>Objectives:</h3>
                     <ul>
-                        ${lesson.parts_of_computer.map(part => `
-                            <li>
-                                <strong>${part.name}:</strong>
-                                <p>${part.definition}</p>
-                                <img src="${part.image}" alt="${part.name}" class="part-image" onclick="openModal('${part.image}')">
-                            </li>
-                        `).join('')}
+                        ${lesson.objectives.map(obj => `<li>${obj}</li>`).join('')}
                     </ul>
-
+                    <h3>Materials Needed:</h3>
+                    <ul>
+                        ${lesson.materials_needed.map(mat => `<li>${mat}</li>`).join('')}
+                    </ul>
                     <h3>Step-by-Step Procedure:</h3>
                     <ol>
                         ${lesson.step_by_step_procedure.map(step => `
                             <li>
-                                <p><strong>${step.step_title}:</strong> ${step.step_description}</p>
-                                <img src="${step.image}" alt="${step.step}" class="step-image" onclick="openModal('${step.image}')">
-                            </li>
-                        `).join('')}
+                                <strong>${step.step_title}:</strong> ${step.step_description}
+                            </li>`).join('')}
                     </ol>
+                    <h3>Conclusion:</h3>
+                    <p>${lesson.conclusion}</p>
                 `;
             } else {
                 lessonTitle.textContent = "Lesson not found";
                 lessonDetails.innerHTML = "<p>Sorry, this lesson is not available.</p>";
             }
         })
-        .catch(error => console.error('Error loading lesson:', error));
+        .catch(error => {
+            lessonTitle.textContent = "Error Loading Lesson";
+            lessonDetails.innerHTML = "<p>Sorry, there was an error loading this lesson.</p>";
+            console.error('Error loading lesson:', error);
+        });
 }
 
 // Function to open image in full size (modal)
@@ -73,4 +66,48 @@ function openModal(imageSrc) {
 // Function to close the window and go back to the student dashboard
 function closeWindow() {
     window.location.href = "student-dashboard.html";
+}
+
+// Function to handle fetching data for both lesson1 and lesson2 from their respective workers
+function loadLesson(lessonId) {
+    const lessonUrl = lessonId === 'lesson1'
+        ? 'https://tesda-auth-api.nextwavehub01.workers.dev/lesson1.json' // Existing worker for lesson1
+        : 'https://coc1lessonworker.nextwavehub01.workers.dev/lesson2.json'; // New worker URL for lesson2
+
+    fetch(lessonUrl)
+        .then(response => response.json())
+        .then(data => {
+            const lesson = data[lessonId]; // Dynamically load lesson based on lessonId
+            if (lesson) {
+                document.getElementById("lesson-title").innerText = lesson.lesson_title;
+                document.getElementById("lesson-details").innerHTML = `
+                    <p>${lesson.lesson_description}</p>
+                    <h3>Objectives:</h3>
+                    <ul>
+                        ${lesson.objectives.map(obj => `<li>${obj}</li>`).join('')}
+                    </ul>
+                    <h3>Materials Needed:</h3>
+                    <ul>
+                        ${lesson.materials_needed.map(mat => `<li>${mat}</li>`).join('')}
+                    </ul>
+                    <h3>Step-by-Step Procedure:</h3>
+                    <ol>
+                        ${lesson.step_by_step_procedure.map(step => `
+                            <li>
+                                <strong>${step.step_title}:</strong> ${step.step_description}
+                            </li>`).join('')}
+                    </ol>
+                    <h3>Conclusion:</h3>
+                    <p>${lesson.conclusion}</p>
+                `;
+            } else {
+                document.getElementById("lesson-title").innerText = "Lesson not found";
+                document.getElementById("lesson-details").innerHTML = "<p>Sorry, this lesson is not available.</p>";
+            }
+        })
+        .catch(error => {
+            document.getElementById("lesson-title").innerText = "Error Loading Lesson";
+            document.getElementById("lesson-details").innerHTML = "<p>Sorry, there was an error loading this lesson.</p>";
+            console.error("Error loading lesson:", error);
+        });
 }
