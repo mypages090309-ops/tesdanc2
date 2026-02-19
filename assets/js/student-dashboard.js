@@ -60,4 +60,3 @@ document.getElementById("enrollmentBtn").addEventListener("click", function () {
     enrollmentContent.style.display = "block";
   }
 });
-
