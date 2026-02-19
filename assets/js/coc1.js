@@ -1,20 +1,34 @@
-// Pag-handle ng navigation ng lessons
-let currentLesson = 1;  // Start with Lesson 1
+let currentLesson = 1;  // Start with lesson 1
 
-function navigateLesson(direction) {
-    const totalLessons = 2; // Total number of lessons
-    const currentLessonDiv = document.getElementById(`lesson${currentLesson}`);
-    currentLessonDiv.style.display = "none";  // Hide current lesson
+// Function to start the lesson
+function startLesson() {
+  document.querySelector('.course-overview').innerHTML = `
+    <div class="lesson-content">
+      <h1>Lesson ${currentLesson}</h1>
+      <p>Details for lesson ${currentLesson} here...</p>
 
-    currentLesson += direction;  // Move to the next or previous lesson
+      <button onclick="nextLesson()">Next Lesson</button>
+      <button onclick="previousLesson()">Previous Lesson</button>
+    </div>
+  `;
+}
 
-    if (currentLesson < 1) currentLesson = totalLessons;  // Wrap around to last lesson
-    if (currentLesson > totalLessons) currentLesson = 1;  // Wrap around to first lesson
+// Function to go to next lesson
+function nextLesson() {
+  currentLesson++;
+  updateLesson();
+}
 
-    const nextLessonDiv = document.getElementById(`lesson${currentLesson}`);
-    nextLessonDiv.style.display = "block";  // Show next lesson
+// Function to go to previous lesson
+function previousLesson() {
+  if (currentLesson > 1) {
+    currentLesson--;
+    updateLesson();
+  }
+}
 
-    // Hide or show previous/next buttons
-    document.getElementById("previousLessonBtn").style.display = currentLesson === 1 ? "none" : "inline-block";
-    document.getElementById("nextLessonBtn").style.display = currentLesson === totalLessons ? "none" : "inline-block";
+// Function to update the lesson content dynamically
+function updateLesson() {
+  document.querySelector('.lesson-content h1').textContent = `Lesson ${currentLesson}`;
+  document.querySelector('.lesson-content p').textContent = `Details for lesson ${currentLesson} here...`;
 }
