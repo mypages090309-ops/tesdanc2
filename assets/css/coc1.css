@@ -156,12 +156,21 @@ body {
 
 /* Image Styling */
 #lesson-details img {
-    max-width: 100%;  /* Responsive width */
+    max-width: 100%;  /* Ensure responsive width */
     height: auto;     /* Maintain aspect ratio */
-    width: 150px;     /* Set a fixed size for the images */
-    margin-top: 10px; /* Add space between the text and image */
+    margin-top: 20px; /* Add space between the text and image */
     display: block;   /* Make the image a block element */
     margin-bottom: 20px; /* Add space after each image */
+}
+
+/* Adjust space for images inside 'parts_of_computer' */
+#lesson-details .part-image {
+    margin: 20px 0;   /* Add top and bottom margin */
+    width: 200px;     /* Set a smaller width for consistency */
+    height: auto;
+    display: block;
+    margin-left: auto; /* Center image horizontally */
+    margin-right: auto; /* Center image horizontally */
 }
 
 /* Responsive design */
