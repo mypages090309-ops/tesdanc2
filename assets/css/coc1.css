@@ -131,6 +131,27 @@ body {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     font-size: 16px;
     color: #555;
+    line-height: 1.8;  /* Improve line height for readability */
+    margin-bottom: 30px;  /* Add margin at the bottom of the lesson */
+}
+
+#lesson-details h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 20px;  /* Add space between heading and previous content */
+}
+
+#lesson-details ul, #lesson-details ol {
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
+#lesson-details ul li, #lesson-details ol li {
+    margin-bottom: 12px; /* Add margin between list items */
+}
+
+#lesson-details p {
+    margin-bottom: 20px; /* Space between paragraphs */
 }
 
 /* Responsive design */
@@ -152,4 +173,3 @@ body {
         font-size: 24px;
     }
 }
-
