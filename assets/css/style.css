@@ -11,7 +11,6 @@ body {
   line-height: 1.6;
 }
 
-/* Container */
 .container {
   max-width: 1200px;
   margin: auto;
@@ -58,24 +57,51 @@ nav a:hover {
 /* ================= BUTTON SYSTEM ================= */
 
 .btn {
-  padding: 12px 26px;
-  border-radius: 6px;
+  padding: 14px 30px;
+  border-radius: 8px;
   font-weight: 600;
   text-decoration: none;
   display: inline-block;
   transition: 0.3s ease;
   cursor: pointer;
+  text-align: center;
+  min-width: 190px;
 }
 
+/* Primary (Gold) */
 .btn-primary {
   background: #F4B400;
   color: #000;
+  border: none;
 }
 
 .btn-primary:hover {
   transform: translateY(-3px);
 }
 
+/* Dark Solid */
+.btn-dark {
+  background: #0B3C5D;
+  color: #fff;
+  border: none;
+}
+
+.btn-dark:hover {
+  transform: translateY(-3px);
+}
+
+/* White Solid */
+.btn-light {
+  background: #ffffff;
+  color: #0B3C5D;
+  border: none;
+}
+
+.btn-light:hover {
+  transform: translateY(-3px);
+}
+
+/* Outline */
 .btn-outline {
   border: 2px solid #0B3C5D;
   color: #0B3C5D;
@@ -110,7 +136,7 @@ nav a:hover {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 20px;
 }
 
 /* ================= SECTIONS ================= */
@@ -160,7 +186,7 @@ nav a:hover {
 
 .cta h2 {
   font-size: 34px;
-  margin-bottom: 35px;
+  margin-bottom: 40px;
   color: #1D2731;
 }
 
@@ -168,7 +194,7 @@ nav a:hover {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 25px;
 }
 
 /* ================= FOOTER ================= */
