@@ -58,7 +58,7 @@
       {
         "step": "Step 4",
         "description": "Pag-assemble ng mga bahagi: I-assemble ang mga na-disassemble na parts. Siguraduhing nakalagay nang maayos ang bawat bahagi tulad ng CPU, RAM, at Hard Drive, at nakakabit ang lahat ng mga cables.",
-        "image": "assets/image/step4jpeg"
+        "image": "assets/image/step4.jpeg"
       },
       {
         "step": "Step 5",
@@ -68,4 +68,5 @@
     ]
   }
 }
+
 
