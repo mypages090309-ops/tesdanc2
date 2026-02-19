@@ -47,3 +47,11 @@ button {
 button:hover {
     background-color: #1d46b6;
 }
+
+.lesson {
+    display: none;  /* All lessons are hidden by default */
+}
+
+.lesson:first-child {
+    display: block;  /* Show the first lesson */
+}
