@@ -3,12 +3,17 @@ function loadLesson(lessonId) {
     const lessonTitle = document.getElementById("lesson-title");
     const lessonDetails = document.getElementById("lesson-details");
 
-    fetch('https://raw.githubusercontent.com/mypages090309-ops/tesdanc2/main/assets/json/lesson1.json')
+    // Set the URL based on the lesson ID
+    const lessonUrl = lessonId === 'lesson1' 
+        ? 'https://raw.githubusercontent.com/mypages090309-ops/tesdanc2/main/assets/json/lesson1.json'
+        : 'https://raw.githubusercontent.com/mypages090309-ops/tesdanc2/main/assets/json/lesson2.json'; // Add more lessons here
+
+    fetch(lessonUrl)
         .then(response => response.json())
         .then(data => {
-            const lesson = data.lesson1;
+            const lesson = data[lessonId]; // Dynamically load the lesson data based on the ID
 
-            if (lessonId === 'lesson1') {
+            if (lesson) {
                 lessonTitle.textContent = lesson.title;
 
                 lessonDetails.innerHTML = `
@@ -35,6 +40,9 @@ function loadLesson(lessonId) {
                         `).join('')}
                     </ol>
                 `;
+            } else {
+                lessonTitle.textContent = "Lesson not found";
+                lessonDetails.innerHTML = "<p>Sorry, this lesson is not available.</p>";
             }
         })
         .catch(error => console.error('Error loading lesson:', error));
