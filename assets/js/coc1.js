@@ -20,7 +20,7 @@ function loadLesson(lessonId) {
                             <li>
                                 <strong>${part.name}:</strong>
                                 <p>${part.definition}</p>
-                                <img src="${part.image}" alt="${part.name}" class="part-image">
+                                <img src="${part.image}" alt="${part.name}" class="part-image" onclick="openModal('${part.image}')">
                             </li>
                         `).join('')}
                     </ul>
@@ -30,7 +30,7 @@ function loadLesson(lessonId) {
                         ${lesson.step_by_step_procedure.map(step => `
                             <li>
                                 <p><strong>${step.step}:</strong> ${step.description}</p>
-                                <img src="${step.image}" alt="${step.step}" class="step-image">
+                                <img src="${step.image}" alt="${step.step}" class="step-image" onclick="openModal('${step.image}')">
                             </li>
                         `).join('')}
                     </ol>
@@ -38,6 +38,22 @@ function loadLesson(lessonId) {
             }
         })
         .catch(error => console.error('Error loading lesson:', error));
+}
+
+// Function to open image in full size (modal)
+function openModal(imageSrc) {
+    const modal = document.createElement("div");
+    modal.classList.add("image-modal");
+    modal.innerHTML = `
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" src="${imageSrc}">
+    `;
+    document.body.appendChild(modal);
+
+    // Close modal when clicking on close button
+    modal.querySelector(".close-modal").addEventListener("click", () => {
+        document.body.removeChild(modal);
+    });
 }
 
 // Function to close the window and go back to the student dashboard
