@@ -1,59 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COC 1 - Course Overview</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/coc1.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COC1 - Course Overview</title>
+  <link rel="stylesheet" href="coc1.css">
 </head>
 <body>
+  <div class="course-overview">
+    <h1>COC 1 - Course Overview</h1>
+    <p>This section focuses on the basics of computer system assembly and installation.</p>
 
-<div class="lesson-container">
-    <h2>COC 1 - Course Overview</h2>
+    <div class="lesson-list">
+      <h2>Lesson 1: Assembly and Disassembly of Computer Unit</h2>
+      <p>In this lesson, we will go over the basic steps to disassemble and reassemble a computer unit.</p>
+      
+      <h2>Lesson 2: Create Bootable USB using Rufus</h2>
+      <p>This lesson teaches how to create a bootable USB drive using Rufus for OS installation.</p>
 
-    <!-- Lesson 1 -->
-    <div id="lesson1" class="lesson">
-        <h3>Lesson 1: Assembly and Disassembly of Computer Unit</h3>
-        <video width="100%" controls>
-            <source src="assets/videos/lesson1.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <h4>Step-by-Step Procedure</h4>
-        <ul>
-            <li>Prepare the necessary tools (screwdrivers, anti-static wrist strap, etc.).</li>
-            <li>Disassemble the computer by opening the case and removing internal components (RAM, HDD, etc.).</li>
-            <li>Assemble the computer by placing the components back in their respective slots.</li>
-            <li>Test the computer and ensure everything is working, including BIOS settings.</li>
-        </ul>
+      <h2>Lesson 3: Configuring Computer Systems</h2>
+      <p>This lesson explains the configuration of computer systems, including networks, software, etc.</p>
+
+      <h2>Lesson 4: Troubleshooting and Diagnostics</h2>
+      <p>Learn how to diagnose and troubleshoot common hardware and software issues.</p>
     </div>
 
-    <!-- Lesson 2 -->
-    <div id="lesson2" class="lesson" style="display:none;">
-        <h3>Lesson 2: Prepare Bootable USB</h3>
-        <video width="100%" controls>
-            <source src="assets/videos/lesson2.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <h4>Step-by-Step Procedure</h4>
-        <ul>
-            <li>Download Rufus software and install it.</li>
-            <li>Plug in a USB drive and open Rufus.</li>
-            <li>Select the bootable OS ISO file and configure settings.</li>
-            <li>Click Start to create the bootable USB.</li>
-        </ul>
+    <div class="start-button">
+      <button onclick="startLesson()">Start</button>
     </div>
+  </div>
 
-    <!-- Add more lessons here -->
-
-    <!-- Navigation buttons -->
-    <div class="lesson-navigation">
-        <button id="previousLessonBtn" onclick="navigateLesson(-1)" style="display:none;">Previous Lesson</button>
-        <button id="nextLessonBtn" onclick="navigateLesson(1)">Next Lesson</button>
-    </div>
-</div>
-
-<script src="assets/js/coc1.js"></script>
-
+  <script src="coc1.js"></script>
 </body>
 </html>
