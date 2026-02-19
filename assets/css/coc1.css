@@ -154,6 +154,16 @@ body {
     margin-bottom: 20px; /* Space between paragraphs */
 }
 
+/* Image Styling */
+#lesson-details img {
+    max-width: 100%;  /* Responsive width */
+    height: auto;     /* Maintain aspect ratio */
+    width: 150px;     /* Set a fixed size for the images */
+    margin-top: 10px; /* Add space between the text and image */
+    display: block;   /* Make the image a block element */
+    margin-bottom: 20px; /* Add space after each image */
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
     .dashboard {
