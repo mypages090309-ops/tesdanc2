@@ -41,6 +41,17 @@
     <div id="lesson-details">
         <p>Select a lesson from the sidebar to view details.</p>
     </div>
+
+    <!-- Take a Quiz Button (Initially hidden) -->
+    <button id="take-quiz-btn" onclick="showQuiz()" style="display: none;">Take a Quiz</button>
+
+    <!-- Quiz Modal (Initially hidden) -->
+    <div id="quiz-modal" style="display: none;">
+        <button onclick="hideQuiz()">Close Quiz</button>
+        <!-- Quiz content will be dynamically loaded here -->
+    </div>
+
+    <button id="next-topic" disabled>Next Topic</button>
   </main>
 </div>
 
