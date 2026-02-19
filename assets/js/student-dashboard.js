@@ -39,8 +39,8 @@ async function loadStudentData() {
 
 loadStudentData();
 
-// Toggle COC Sections
-document.getElementById("myEnrollmentBtn").addEventListener("click", function() {
+// Toggle COC Sections visibility
+document.querySelector(".sidebar ul li a[href='#']").addEventListener("click", function() {
   const cocSections = document.querySelectorAll(".coc-section");
   cocSections.forEach(section => {
     section.classList.toggle("active");
