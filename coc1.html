@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COC 1 - Install and Configure Computer Systems</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/coc1.css">
+    <link rel="stylesheet" href="assets/css/coc1.css"> <!-- Link to your CSS -->
 </head>
 <body>
 
@@ -43,30 +43,29 @@
 <script>
     // Function to load lesson details dynamically into the content area
     function loadLesson(lessonId) {
-        const lessonDetails = {
-            lesson1: {
-                title: "Assembly and Disassembly of Computer Unit",
-                content: "<p>This lesson covers how to assemble and disassemble a computer unit. It includes step-by-step procedures for handling hardware components carefully and safely.</p>"
-            },
-            lesson2: {
-                title: "Test the Computer Unit and Configure BIOS",
-                content: "<p>This lesson teaches you how to test the computer unit and configure BIOS settings to ensure the system is working properly. It includes the steps for BIOS setup and checking hardware components.</p>"
-            },
-            lesson3: {
-                title: "Prepare the Bootable USB Installers",
-                content: "<p>This lesson explains how to prepare bootable USB installers for operating system installation, including creating the USB drive and setting up the BIOS for booting from USB.</p>"
-            },
-            // Add more lessons as needed...
-        };
+        const lessonUrl = lessonId === 'lesson1'
+            ? 'https://your-worker-name.your-domain.workers.dev/lesson1.json'  // Existing lesson1 worker URL
+            : 'https://your-worker-name.your-domain.workers.dev/lesson2.json';  // New worker URL for lesson2
 
-        const lesson = lessonDetails[lessonId];
-        if (lesson) {
-            document.getElementById("lesson-title").innerText = lesson.title;
-            document.getElementById("lesson-details").innerHTML = lesson.content;
-        } else {
-            document.getElementById("lesson-title").innerText = "Lesson not found";
-            document.getElementById("lesson-details").innerHTML = "<p>Sorry, this lesson is not available.</p>";
-        }
+        fetch(lessonUrl)
+            .then(response => response.json())
+            .then(data => {
+                const lesson = data[lessonId]; // Dynamically load lesson based on lessonId
+                if (lesson) {
+                    document.getElementById("lesson-title").innerText = lesson.title;
+                    document.getElementById("lesson-details").innerHTML = `
+                        <p>${lesson.content}</p>
+                    `;
+                } else {
+                    document.getElementById("lesson-title").innerText = "Lesson not found";
+                    document.getElementById("lesson-details").innerHTML = "<p>Sorry, this lesson is not available.</p>";
+                }
+            })
+            .catch(error => {
+                document.getElementById("lesson-title").innerText = "Error Loading Lesson";
+                document.getElementById("lesson-details").innerHTML = "<p>Sorry, there was an error loading this lesson.</p>";
+                console.error("Error loading lesson:", error);
+            });
     }
 
     // Close the window or lesson content
