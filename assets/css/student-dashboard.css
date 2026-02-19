@@ -1,103 +1,104 @@
 /* student-dashboard.css */
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Inter',sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 
-body{
-  background:#f1f5f9;
+body {
+  background: #f1f5f9;
 }
 
-.dashboard{
-  display:flex;
-  min-height:100vh;
+.dashboard {
+  display: flex;
+  min-height: 100vh;
 }
 
-.sidebar{
-  width:250px;
-  background:#0f172a;
-  color:#fff;
-  padding:30px 20px;
+.sidebar {
+  width: 250px;
+  background: #0f172a;
+  color: #fff;
+  padding: 30px 20px;
 }
 
-.sidebar h2{
-  margin-bottom:30px;
+.sidebar h2 {
+  margin-bottom: 30px;
 }
 
-.sidebar ul{
-  list-style:none;
+.sidebar ul {
+  list-style: none;
 }
 
-.sidebar li{
-  padding:12px;
-  border-radius:8px;
-  cursor:pointer;
-  margin-bottom:10px;
-  transition:.3s ease;
+.sidebar li {
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: .3s ease;
 }
 
 .sidebar li:hover,
-.sidebar .active{
-  background:#2563eb;
+.sidebar .active {
+  background: #2563eb;
 }
 
-.main-content{
-  flex:1;
-  padding:40px;
+.main-content {
+  flex: 1;
+  padding: 40px;
 }
 
-.main-content header{
-  margin-bottom:30px;
+.main-content header {
+  margin-bottom: 30px;
 }
 
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
 }
 
-.card{
-  background:#fff;
-  padding:25px;
-  border-radius:12px;
-  box-shadow:0 10px 30px rgba(0,0,0,.05);
+.card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .05);
 }
 
-/* Remove underline and make sure the links are clean */
+/* Sidebar links with no underline */
 .sidebar-content {
-    display: none; /* Initially hidden */
-    padding-left: 20px;
-    margin-top: 10px;
-    transition: all 0.3s ease-in-out;
+  display: none; /* Initially hidden */
+  padding-left: 20px;
+  margin-top: 10px;
+  transition: all 0.3s ease-in-out;
 }
 
 .sidebar-content li {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .sidebar-content a {
-    text-decoration: none; /* Remove underline */
-    color: #007bff; /* Blue color for links */
+  text-decoration: none; /* Remove underline */
+  color: white; /* White color for the links */
 }
 
 .sidebar-content a:hover {
-    color: #0056b3; /* Darker blue when hovering */
-    text-decoration: none; /* Ensures no underline on hover */
+  color: #2563eb; /* Change color to blue on hover */
+  text-decoration: none; /* Ensure no underline on hover */
 }
 
+/* Accordion-style button */
 .accordion-button {
-    background-color: transparent;
-    color: #007bff;
-    padding: 10px;
-    width: 100%;
-    text-align: left;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
+  background-color: transparent;
+  color: #007bff;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
 }
 
 .accordion-button:hover {
-    background-color: #f0f0f0;
+  background-color: #f0f0f0;
 }
