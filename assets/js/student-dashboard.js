@@ -13,6 +13,8 @@ async function loadStudentData() {
     const response = await fetch(`${API_URL}/student-info?email=${email}`);
     const data = await response.json();
 
+    console.log("API Response:", data);  // Ilog ang response para makita kung may error
+
     if (!response.ok) {
       console.error(data.error);
       return;
@@ -40,7 +42,7 @@ async function loadStudentData() {
       lockedSection.style.display = "none";
     }
   } catch (err) {
-    console.error("Failed to load student data");
+    console.error("Failed to load student data:", err);
   }
 }
 
