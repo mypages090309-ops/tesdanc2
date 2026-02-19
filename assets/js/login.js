@@ -10,9 +10,12 @@ document.getElementById("loginForm").addEventListener("submit", function(e){
     return;
   }
 
-  console.log("Login Attempt:", { email, role });
+  // 🔐 Save fake session
+  localStorage.setItem("loggedIn", "true");
+  localStorage.setItem("userRole", role);
+  localStorage.setItem("userEmail", email);
 
-  // Temporary redirect simulation
+  // Redirect based on role
   if(role === "student"){
     window.location.href = "student-dashboard.html";
   } else {
