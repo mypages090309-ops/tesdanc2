@@ -10,11 +10,16 @@ body {
 .main-header {
     background-color: #0f172a; /* Match header color with sidebar */
     color: white;
-    padding: 15px; /* Reduced padding for a smaller header */
+    padding: 10px; /* Reduced padding for smaller header */
     text-align: center;
-    font-size: 26px; /* Slightly smaller text size */
+    font-size: 22px; /* Smaller font size */
     font-weight: 600;
     letter-spacing: 1px;
+    border-bottom: 4px solid #1d4ed8; /* Added bottom border to make it stand out */
+}
+
+.main-header h1 {
+    margin: 0;
 }
 
 /* Dashboard layout */
