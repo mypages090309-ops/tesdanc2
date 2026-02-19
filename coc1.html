@@ -44,8 +44,8 @@
     // Function to load lesson details dynamically into the content area
     function loadLesson(lessonId) {
         const lessonUrl = lessonId === 'lesson1'
-            ? 'https://your-worker-name.your-domain.workers.dev/lesson1.json'  // Existing lesson1 worker URL
-            : 'https://your-worker-name.your-domain.workers.dev/lesson2.json';  // New worker URL for lesson2
+            ? 'https://tesda-auth-api.nextwavehub01.workers.dev/lesson1.json'  // Existing lesson1 worker URL
+            : 'https://coc1lessonworker.nextwavehub01.workers.dev/lesson2.json';  // New worker URL for lesson2
 
         fetch(lessonUrl)
             .then(response => response.json())
@@ -78,3 +78,4 @@
 <script src="assets/js/coc1.js"></script> <!-- Correct JS path -->
 </body>
 </html>
+
