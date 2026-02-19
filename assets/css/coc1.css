@@ -92,6 +92,7 @@ body {
     box-sizing: border-box;
     border-left: 1px solid #e5e5e5;
     overflow-y: auto;
+    position: relative; /* Added to make sure X button stays in position */
     transition: all 0.3s ease-in-out;
 }
 
