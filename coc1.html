@@ -3,18 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>COC1 - Course Overview</title>
+  <title>COC 1 - Course Overview</title>
   <link rel="stylesheet" href="coc1.css">
 </head>
 <body>
+
   <div class="course-overview">
     <h1>COC 1 - Course Overview</h1>
     <p>This section focuses on the basics of computer system assembly and installation.</p>
 
+    <!-- List of Lessons -->
     <div class="lesson-list">
       <h2>Lesson 1: Assembly and Disassembly of Computer Unit</h2>
       <p>In this lesson, we will go over the basic steps to disassemble and reassemble a computer unit.</p>
-      
+
       <h2>Lesson 2: Create Bootable USB using Rufus</h2>
       <p>This lesson teaches how to create a bootable USB drive using Rufus for OS installation.</p>
 
@@ -23,11 +25,41 @@
 
       <h2>Lesson 4: Troubleshooting and Diagnostics</h2>
       <p>Learn how to diagnose and troubleshoot common hardware and software issues.</p>
+
+      <h2>Lesson 5: Install and Configure OS</h2>
+      <p>Learn how to install and configure operating systems, such as Windows and Linux, on a computer system.</p>
+
+      <h2>Lesson 6: Setting Up Computer Networks</h2>
+      <p>This lesson covers the setup of basic networking configurations for computers and other devices.</p>
+
+      <h2>Lesson 7: Computer Maintenance</h2>
+      <p>Learn about the importance of maintaining your computer hardware and software for optimum performance.</p>
+
+      <h2>Lesson 8: Installing Peripheral Devices</h2>
+      <p>This lesson teaches how to install and configure printers, scanners, and other peripherals.</p>
+
+      <h2>Lesson 9: System Recovery and Backup</h2>
+      <p>Learn the best practices for system recovery and backing up your data.</p>
+
+      <h2>Lesson 10: Understanding BIOS and CMOS Settings</h2>
+      <p>This lesson explains how to configure BIOS/UEFI settings and understand CMOS battery functions.</p>
+
+      <h2>Lesson 11: Final Project and Certification</h2>
+      <p>This lesson focuses on your final project for COC1 and earning your certification.</p>
     </div>
 
+    <!-- Start button to begin lesson -->
     <div class="start-button">
       <button onclick="startLesson()">Start</button>
     </div>
+  </div>
+
+  <div class="lesson-container" id="lesson-container">
+    <!-- Placeholder for Lesson Content -->
+    <h1>Lesson 1: Assembly and Disassembly of Computer Unit</h1>
+    <p>Step-by-step procedure here...</p>
+    <button onclick="nextLesson()">Next Lesson</button>
+    <button onclick="previousLesson()">Previous Lesson</button>
   </div>
 
   <script src="coc1.js"></script>
