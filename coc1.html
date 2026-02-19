@@ -4,35 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COC 1 - Install and Configure Computer Systems</title>
-    <link rel="stylesheet" href="coc1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="coc1.css"> <!-- Link to COC1-specific CSS -->
 </head>
 <body>
-    <div class="container">
-        <!-- Sidebar -->
-        <div class="sidebar">
-            <h2>Lessons</h2>
-            <ul id="lesson-list">
-                <li onclick="loadLesson('lesson1')">Assembly and Disassembly of Computer Unit</li>
-                <li onclick="loadLesson('lesson2')">Test the Computer Unit and Configure BIOS</li>
-                <li onclick="loadLesson('lesson3')">Prepare the Bootable USB Installers</li>
-                <li onclick="loadLesson('lesson4')">Install Drivers & Share Printer</li>
-                <li onclick="loadLesson('lesson5')">Configure Computer Systems</li>
-                <li onclick="loadLesson('lesson6')">Turn off Firewalls (All Computers)</li>
-                <li onclick="loadLesson('lesson7')">Configure Advanced Sharing (All Computers)</li>
-                <li onclick="loadLesson('lesson8')">Rename Computers (SERVER: last name, CLIENT: first name)</li>
-            </ul>
-        </div>
 
-        <!-- Content Section -->
-        <div class="content">
-            <button class="close-btn" onclick="closeWindow()">X</button>
-            <h2 id="lesson-title">Welcome to your lessons</h2>
-            <div id="lesson-details">
-                <p>Select a lesson from the sidebar to view details.</p>
-            </div>
-        </div>
+<div class="dashboard">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2>COC 1 Lessons</h2>
+    <ul>
+      <li onclick="loadLesson('lesson1')">Assembly and Disassembly of Computer Unit</li>
+      <li onclick="loadLesson('lesson2')">Test the Computer Unit and Configure BIOS</li>
+      <li onclick="loadLesson('lesson3')">Prepare the Bootable USB Installers</li>
+      <li onclick="loadLesson('lesson4')">Install Drivers & Share Printer</li>
+      <li onclick="loadLesson('lesson5')">Configure Computer Systems</li>
+      <li onclick="loadLesson('lesson6')">Turn off Firewalls (All Computers)</li>
+      <li onclick="loadLesson('lesson7')">Configure Advanced Sharing (All Computers)</li>
+      <li onclick="loadLesson('lesson8')">Rename Computers (SERVER: last name, CLIENT: first name)</li>
+    </ul>
+  </aside>
+
+  <!-- Content Section -->
+  <main class="main-content">
+    <button class="close-btn" onclick="closeWindow()">X</button>
+    <h1 id="lesson-title">Welcome to COC1 - Install and Configure Computer Systems</h1>
+
+    <!-- Lesson Details -->
+    <div id="lesson-details">
+        <p>Select a lesson from the sidebar to view details.</p>
     </div>
+  </main>
+</div>
 
-    <script src="coc1.js"></script>
+<script src="coc1.js"></script> <!-- Link to COC1-specific JS -->
 </body>
 </html>
