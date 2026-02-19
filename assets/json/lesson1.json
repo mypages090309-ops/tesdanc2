@@ -2,124 +2,69 @@
   "lesson1": {
     "title": "Assembly at Disassembly ng Computer Unit",
     "overview": "Ang lesson na ito ay magtuturo ng step-by-step na proseso ng assembly at disassembly ng computer system. Mahalaga ang kaalaman na ito para sa mga IT technician upang magawa ang computer maintenance at troubleshooting.",
-    
     "parts_of_computer": [
       {
         "name": "CPU (Central Processing Unit)",
-        "definition": "Ang CPU ay ang 'utak' ng computer kung saan ginagawa ang lahat ng processing tasks. Dito isinasagawa at ipinaproseso ang mga instructions mula sa mga program ng computer."
+        "definition": "Ang CPU ay ang 'utak' ng computer kung saan ginagawa ang lahat ng processing tasks. Dito isinasagawa at ipinaproseso ang mga instructions mula sa mga program ng computer.",
+        "image": "assets/image/cpu.jpeg"
       },
       {
         "name": "Motherboard",
-        "definition": "Ang motherboard ay ang pangunahing circuit board na nagkokonekta sa lahat ng components ng computer. Dito nakakabit ang CPU, memory, at iba pang parts ng system."
+        "definition": "Ang motherboard ay ang pangunahing circuit board na nagkokonekta sa lahat ng components ng computer. Dito nakakabit ang CPU, memory, at iba pang parts ng system.",
+        "image": "assets/image/motherboard.jpeg"
       },
       {
         "name": "RAM (Random Access Memory)",
-        "definition": "Ang RAM ay ang temporary memory ng computer. Dito tinatago ang data na kinakailangan ng CPU para sa mga aktibong tasks at programa. Mas mataas ang RAM, mas mabilis ang performance ng computer."
+        "definition": "Ang RAM ay ang temporary memory ng computer. Dito tinatago ang data na kinakailangan ng CPU para sa mga aktibong tasks at programa. Mas mataas ang RAM, mas mabilis ang performance ng computer.",
+        "image": "assets/image/ram.jpeg"
       },
       {
         "name": "Hard Drive (HDD/SSD)",
-        "definition": "Ang hard drive ay ang permanent storage device ng computer, kung saan naka-store ang mga files, dokumento, at operating system. Ang SSD ay mas mabilis kumpara sa HDD."
+        "definition": "Ang hard drive ay ang permanent storage device ng computer, kung saan naka-store ang mga files, dokumento, at operating system. Ang SSD ay mas mabilis kumpara sa HDD.",
+        "image": "assets/image/hdd.jpeg"
       },
       {
         "name": "Power Supply Unit (PSU)",
-        "definition": "Ang PSU ay nagko-convert ng electrical power mula sa wall outlet papunta sa power requirements ng mga internal components ng computer."
+        "definition": "Ang PSU ay nagko-convert ng electrical power mula sa wall outlet papunta sa power requirements ng mga internal components ng computer.",
+        "image": "assets/image/power_supply.jpeg"
       },
       {
         "name": "Cooling Fans",
-        "definition": "Ang cooling fans ay ginagamit upang mapanatiling malamig ang mga internal components ng computer, lalo na ang CPU, para maiwasan ang overheating."
+        "definition": "Ang cooling fans ay ginagamit upang mapanatiling malamig ang mga internal components ng computer, lalo na ang CPU, para maiwasan ang overheating.",
+        "image": "assets/image/cooling fan.jpeg"
       },
       {
         "name": "Optical Drive",
-        "definition": "Ang optical drive ay ginagamit upang magbasa at magsulat ng data sa optical discs tulad ng CDs o DVDs, bagaman hindi na ito kadalasang ginagamit sa mga modernong computers."
+        "definition": "Ang optical drive ay ginagamit upang magbasa at magsulat ng data sa optical discs tulad ng CDs o DVDs, bagaman hindi na ito kadalasang ginagamit sa mga modernong computers.",
+        "image": "assets/image/optical drive.jpeg"
       }
     ],
-    
     "step_by_step_procedure": [
       {
-        "step": "Maghanda ng mga tools at workspace.",
-        "description": "Siguraduhing mayroon kang tamang tools: screwdriver, anti-static wristband, at pliers. Magtakda ng malinis at static-free workspace upang maiwasan ang pagkasira ng mga components."
+        "step": "Step 1",
+        "description": "Tamang paggamit ng Anti-Static Wrist Strap",
+        "image": "assets/image/optical drive.jpeg"
       },
       {
-        "step": "Patayin ang system at i-unplug ang lahat ng cables.",
-        "description": "Bago magsimula, siguraduhing ang computer ay naka-off at naka-unplug mula sa wall outlet upang maiwasan ang mga electrical hazards."
+        "step": "Step 2",
+        "description": "Pagbubukas ng Computer Case",
+        "image": "assets/image/cpu.jpeg"
       },
       {
-        "step": "Buksan ang computer case.",
-        "description": "Tanggalin ang mga screws na nakakabit sa side panel at ilagay ito ng maayos upang ma-access ang mga internal components."
+        "step": "Step 3",
+        "description": "Pagtanggal ng Mga Bahagi",
+        "image": "assets/image/hdd.jpeg"
       },
       {
-        "step": "Alisin ang mga internal components tulad ng RAM, Hard Drive, at Cooling Fans.",
-        "description": "Maingat na alisin ang RAM sticks sa pamamagitan ng pagpapababa ng clips. I-disconnect ang hard drive at mga cooling fans mula sa motherboard."
+        "step": "Step 4",
+        "description": "Pag-assemble ng mga bahagi",
+        "image": "assets/image/power_supply.jpeg"
       },
       {
-        "step": "Ibalik ang mga components at isara ang case.",
-        "description": "Ibalik ang mga components sa kanilang mga slots at i-secure ang mga ito. I-reconnect ang mga power cables, hard drive, at cooling fans."
-      },
-      {
-        "step": "Testing ang system upang siguraduhing gumagana ng maayos.",
-        "description": "I-power on ang system at tiyakin na lahat ng components ay gumagana nang maayos. I-verify na gumagana ang monitor, keyboard, at iba pang peripherals."
+        "step": "Step 5",
+        "description": "Pag-test ng System",
+        "image": "assets/image/cooling fan.jpeg"
       }
-    ],
-    
-    "video": {
-      "url": "assets/videos/assembly_disassembly.mp4",
-      "description": "Panuorin ang video na ito para sa isang visual demonstration ng proseso ng assembly at disassembly ng computer."
-    },
-    
-    "quiz": [
-      {
-        "question": "Ano ang unang hakbang sa pag-disassemble ng computer?",
-        "options": ["Patayin ang system", "Buksan ang case", "Alisin ang RAM"],
-        "answer": "Patayin ang system"
-      },
-      {
-        "question": "Tama o Mali: Ang RAM ay nag-iimbak ng data nang permanente.",
-        "options": ["Tama", "Mali"],
-        "answer": "Mali"
-      },
-      {
-        "question": "Anong tool ang kailangan upang buksan ang computer case?",
-        "options": ["Martilyo", "Screwdriver", "Pliers"],
-        "answer": "Screwdriver"
-      },
-      {
-        "question": "Ano ang layunin ng CPU?",
-        "options": ["Upang mag-imbak ng data", "Upang magsagawa ng instructions", "Upang palamigin ang system"],
-        "answer": "Upang magsagawa ng instructions"
-      },
-      {
-        "question": "Alin sa mga sumusunod ang HINDI bahagi ng motherboard?",
-        "options": ["CPU", "RAM", "Hard Drive", "Power Supply"],
-        "answer": "Power Supply"
-      },
-      {
-        "question": "Tama o Mali: Kailangan magsuot ng anti-static wristband kapag nagta-trabaho sa loob ng computer.",
-        "options": ["Tama", "Mali"],
-        "answer": "Tama"
-      },
-      {
-        "question": "Ano ang layunin ng cooling fan?",
-        "options": ["Upang mag-imbak ng data", "Upang panatilihing malamig ang computer", "Upang magbigay ng power sa system"],
-        "answer": "Upang panatilihing malamig ang computer"
-      },
-      {
-        "question": "Alin sa mga ito ang permanent storage para sa computer?",
-        "options": ["RAM", "Hard Drive", "Cooling Fan"],
-        "answer": "Hard Drive"
-      },
-      {
-        "question": "Tama o Mali: Ang motherboard ang kumokonekta sa lahat ng components ng computer.",
-        "options": ["Tama", "Mali"],
-        "answer": "Tama"
-      },
-      {
-        "question": "Ano ang mangyayari kung hindi nakakabit ng maayos ang power supply?",
-        "options": ["Hindi magpo-power on ang system", "Mag-o-overheat ang system", "Bibilis ang system"],
-        "answer": "Hindi magpo-power on ang system"
-      }
-    ],
-    
-    "passing_score": 80,
-    "total_questions": 10
+    ]
   }
 }
