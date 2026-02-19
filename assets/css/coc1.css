@@ -167,7 +167,7 @@ body {
 }
 
 /* Image Styling for Step-by-Step Procedure */
-#lesson-details img {
+#lesson-details .step-image {
     max-width: 100%;  /* Ensure responsive width */
     height: auto;     /* Maintain aspect ratio */
     width: 80%;       /* Set a fixed size for the images */
@@ -176,15 +176,6 @@ body {
     margin-left: auto; /* Center the image horizontally */
     margin-right: auto; /* Center the image horizontally */
     margin-bottom: 20px; /* Add space after each image */
-}
-
-/* Image Size Fix for Steps */
-#lesson-details .step-image {
-    max-width: 100%;  /* Ensure responsive width */
-    height: auto;     /* Maintain aspect ratio */
-    width: 80%;       /* Adjust width for a consistent look */
-    display: block;
-    margin: 10px auto;  /* Center and add margin */
 }
 
 /* Modal for Image Preview */
