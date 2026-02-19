@@ -105,3 +105,8 @@ body {
 .coc-section.active {
   display: block;
 }
+
+/* To hide the COC links initially */
+.coc-links {
+  display: none;
+}
