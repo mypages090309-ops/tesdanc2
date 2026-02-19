@@ -19,18 +19,17 @@ async function loadStudentData() {
     }
 
     const statusElement = document.getElementById("enrollmentStatus");
-    const lockedSection = document.getElementById("lockedContent");
+    const cocLinks = document.querySelectorAll(".coc-links");
 
     if (data.enrollment_status === "Approved") {
       statusElement.innerHTML = `<span style="color:green;font-weight:600;">Enrollment Approved ✅</span>`;
-      lockedSection.style.display = "block";
+      cocLinks.forEach(link => link.style.display = "block"); // Show COC links
     } else if (data.enrollment_status === "Rejected") {
       statusElement.innerHTML = `<span style="color:red;font-weight:600;">Enrollment Rejected ❌</span>`;
-      lockedSection.style.display = "none";
-      alert("Your enrollment has been rejected. Please contact your trainer.");
+      cocLinks.forEach(link => link.style.display = "none"); // Hide COC links
     } else {
       statusElement.innerHTML = `<span style="color:orange;font-weight:600;">Waiting for Approval ⏳</span>`;
-      lockedSection.style.display = "none";
+      cocLinks.forEach(link => link.style.display = "none"); // Hide COC links
     }
   } catch (err) {
     console.error("Failed to load student data");
@@ -39,11 +38,15 @@ async function loadStudentData() {
 
 loadStudentData();
 
-// Toggle COC Sections visibility
-document.querySelector(".sidebar ul li a[href='#']").addEventListener("click", function() {
-  const cocSections = document.querySelectorAll(".coc-section");
-  cocSections.forEach(section => {
-    section.classList.toggle("active");
+// Show/Hide COC links when "My Enrollment" is clicked
+document.getElementById("myEnrollment").addEventListener("click", function() {
+  const cocLinks = document.querySelectorAll(".coc-links");
+  cocLinks.forEach(link => {
+    if (link.style.display === "none") {
+      link.style.display = "block";
+    } else {
+      link.style.display = "none";
+    }
   });
 });
 
