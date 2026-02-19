@@ -3,15 +3,15 @@ function loadLesson(lessonId) {
     const lessonTitle = document.getElementById("lesson-title");
     const lessonDetails = document.getElementById("lesson-details");
 
-    // Set the URL based on the lesson ID
-    const lessonUrl = lessonId === 'lesson1' 
+    // Set the URL based on the lesson selected
+    const lessonUrl = lessonId === 'lesson1'
         ? 'https://raw.githubusercontent.com/mypages090309-ops/tesdanc2/main/assets/json/lesson1.json'
-        : 'https://raw.githubusercontent.com/mypages090309-ops/tesdanc2/main/assets/json/lesson2.json'; // Add more lessons here
+        : 'https://raw.githubusercontent.com/mypages090309-ops/tesdanc2/main/assets/json/lesson2.json';  // Updated for lesson2
 
     fetch(lessonUrl)
         .then(response => response.json())
         .then(data => {
-            const lesson = data[lessonId]; // Dynamically load the lesson data based on the ID
+            const lesson = data[lessonId];  // Dynamically load lesson based on lessonId
 
             if (lesson) {
                 lessonTitle.textContent = lesson.title;
@@ -34,7 +34,7 @@ function loadLesson(lessonId) {
                     <ol>
                         ${lesson.step_by_step_procedure.map(step => `
                             <li>
-                                <p><strong>${step.step}:</strong> ${step.description}</p>
+                                <p><strong>${step.step_title}:</strong> ${step.step_description}</p>
                                 <img src="${step.image}" alt="${step.step}" class="step-image" onclick="openModal('${step.image}')">
                             </li>
                         `).join('')}
