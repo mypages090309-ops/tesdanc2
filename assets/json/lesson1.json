@@ -42,27 +42,27 @@
     "step_by_step_procedure": [
       {
         "step": "Step 1",
-        "description": "Tamang paggamit ng Anti-Static Wrist Strap",
+        "description": "Tamang paggamit ng Anti-Static Wrist Strap: Itakda ang anti-static wrist strap sa iyong pulso at i-clip ang kabilang dulo nito sa metal na bahagi ng computer case upang maiwasan ang static electricity na makakasira sa mga internal components ng computer.",
         "image": "assets/image/optical drive.jpeg"
       },
       {
         "step": "Step 2",
-        "description": "Pagbubukas ng Computer Case",
+        "description": "Pagbubukas ng Computer Case: Gumamit ng tamang tools tulad ng screwdrivers upang alisin ang mga screws na nakakabit sa case. Siguraduhing maingat sa paghugot ng mga screws at alisin ang case upang makita ang mga internal parts ng computer.",
         "image": "assets/image/cpu.jpeg"
       },
       {
         "step": "Step 3",
-        "description": "Pagtanggal ng Mga Bahagi",
+        "description": "Pagtanggal ng Mga Bahagi: Alisin ang mga external cables at internal connections tulad ng mga power cables, SATA cables, at memory modules. Gamitin ang tamang pamamaraan upang maiwasang masira ang mga connectors.",
         "image": "assets/image/hdd.jpeg"
       },
       {
         "step": "Step 4",
-        "description": "Pag-assemble ng mga bahagi",
+        "description": "Pag-assemble ng mga bahagi: I-assemble ang mga na-disassemble na parts. Siguraduhing nakalagay nang maayos ang bawat bahagi tulad ng CPU, RAM, at Hard Drive, at nakakabit ang lahat ng mga cables.",
         "image": "assets/image/power_supply.jpeg"
       },
       {
         "step": "Step 5",
-        "description": "Pag-test ng System",
+        "description": "Pag-test ng System: I-connect ang power supply at buksan ang computer. I-check kung ang mga internal components ay tumatakbo ng maayos at walang aberya.",
         "image": "assets/image/cooling fan.jpeg"
       }
     ]
