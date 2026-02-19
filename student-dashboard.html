@@ -15,10 +15,13 @@
   <aside class="sidebar">
     <h2>Student Panel</h2>
     <ul>
-      <li class="active">Dashboard</li>
-      <li>My Enrollment</li>
-      <li>Requirements</li>
-      <li>Profile</li>
+      <li class="active"><a href="student-dashboard.html">Dashboard</a></li>
+      <li><a href="#">My Enrollment</a></li>
+      <li><a href="coc1.html">COC1</a></li>
+      <li><a href="coc2.html">COC2</a></li>
+      <li><a href="coc3.html">COC3</a></li>
+      <li><a href="coc4.html">COC4</a></li>
+      <li><a href="#">Profile</a></li>
       <li id="logoutBtn">Logout</li>
     </ul>
   </aside>
@@ -26,10 +29,10 @@
   <main class="main-content">
     <header>
       <h1>Welcome, Student 👋</h1>
-      <p>Your training progress overview</p>
+      <p>Your CSS NC II training overview</p>
     </header>
 
-    <!-- Enrollment Status + Dynamic Sections -->
+    <!-- Enrollment Status -->
     <div class="cards">
 
       <div class="card">
@@ -39,19 +42,19 @@
 
     </div>
 
-    <!-- LOCKED CONTENT (Hidden until approved) -->
+    <!-- LOCKED CONTENT (Only visible if Approved) -->
     <div id="lockedContent" style="display:none;">
 
       <div class="cards" style="margin-top:20px;">
 
         <div class="card">
-          <h3>Submitted Requirements</h3>
-          <p>3 / 5 Completed</p>
+          <h3>Course Overview</h3>
+          <p>CSS NC II consists of 4 COCs (Certificate of Competency).</p>
         </div>
 
         <div class="card">
-          <h3>Training Schedule</h3>
-          <p>Not Yet Assigned</p>
+          <h3>Training Progress</h3>
+          <p>Progress tracking coming soon...</p>
         </div>
 
       </div>
